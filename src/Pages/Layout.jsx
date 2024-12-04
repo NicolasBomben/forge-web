@@ -2,6 +2,7 @@ import { NavBar } from "../components/NavBar";
 import { Hero } from "../components/Hero";
 import { Services } from "../components/Services";
 import { PricingPlans } from "../components/PricingPlans";
+import { Clients } from "../components/Clients";
 
 export const Layout = () => {
   return (
@@ -11,6 +12,7 @@ export const Layout = () => {
         <Hero />
         <Services />
         <PricingPlans />
+        <Clients />
       </main>
     </div>
   );
