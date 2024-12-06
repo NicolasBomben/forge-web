@@ -7,7 +7,7 @@ export const Clients = () => {
   return (
     <section
       id="clients"
-      className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 px-4 md:px-6 overflow-hidden"
+      className="w-full py-12 md:py-24 lg:py-32 bg-[#f7f9fc] px-4 md:px-6 overflow-hidden"
     >
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
