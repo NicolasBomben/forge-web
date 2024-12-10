@@ -1,58 +1,39 @@
 import { useState } from "react";
-import { Code, Menu } from "lucide-react";
+import { Code, Menu, X } from "lucide-react";
 
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="px-4 lg:px-6 h-14 flex items-center border-b">
-      <a className="flex items-center justify-center">
-        <Code className="h-6 w-6 mr-2" />
-        <span className="text-bold">ForgeTech</span>
-      </a>
-      <button
-        className="ml-auto md:hidden"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        <Menu className="h-6 w-6" />
-        <span className="sr-only">Toggle Menu</span>
-      </button>
-      <nav
-        className={`${
-          isMenuOpen ? "flex" : "hidden"
-        } md:flex absolute md:relative top-14 left-0 right-0 md:top-0 flex-col md:flex-row gap-4 p-4 md:p-0 bg-white  md:bg-transparent shadow-lg md:shadow-none md:ml-auto`}
-      >
-        <a
-          className="text-sm font-medium hover:underline underline-offset-4"
-          href="#services"
-        >
-          Services
-        </a>
-        <a
-          className="text-sm font-medium hover:underline underline-offset-4"
-          href="#pricing"
-        >
-          Pricing
-        </a>
-        <a
-          className="text-sm font-medium hover:underline underline-offset-4"
-          href="#clients"
-        >
-          Clients
-        </a>
-        <a
-          className="text-sm font-medium hover:underline underline-offset-4"
-          href="#about"
-        >
-          About
-        </a>
-        <a
-          className="text-sm font-medium hover:underline underline-offset-4"
-          href="#contact"
-        >
-          Contact
-        </a>
-      </nav>
-    </header>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-white">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <a href="#" className="flex items-center space-x-2">
+            <Code className="h-8 w-8" />
+            <span className="text-xl font-bold">DevCo</span>
+          </a>
+          <nav className="hidden md:flex space-x-6">
+            <a href="#services" className="hover:text-accent transition-colors">Services</a>
+            <a href="#pricing" className="hover:text-accent transition-colors">Pricing</a>
+            <a href="#about" className="hover:text-accent transition-colors">About</a>
+            <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
+          </nav>
+          <button 
+            className="md:hidden text-white"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+        {isMenuOpen && (
+          <nav className="md:hidden bg-primary py-4">
+            <div className="container mx-auto px-4 flex flex-col space-y-4">
+              <a href="#services" className="text-white hover:text-accent transition-colors" onClick={() => setIsMenuOpen(false)}>Services</a>
+              <a href="#pricing" className="text-white hover:text-accent transition-colors" onClick={() => setIsMenuOpen(false)}>Pricing</a>
+              <a href="#about" className="text-white hover:text-accent transition-colors" onClick={() => setIsMenuOpen(false)}>About</a>
+              <a href="#contact" className="text-white hover:text-accent transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</a>
+            </div>
+          </nav>
+        )}
+      </header>
   );
 };

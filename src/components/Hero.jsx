@@ -1,27 +1,27 @@
 export const Hero = () => {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 px-4 md:px-6">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h1 className="text-3xl text-primary font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-              Software Development Services
+    <section className="min-h-screen flex items-center w-full py-12 md:py-24 lg:py-32 px-4 md:px-6 bg-gradient-to-br from-primary via-secondary to-accent overflow-hidden relative">
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        
+        <div className="container mx-auto relative z-10 pt-16">
+          <div className="flex flex-col items-center space-y-4 text-center">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-white">
+              Innovative Software Solutions
             </h1>
-            <p className="mx-auto max-w-[700px] text-foreground md:text-xl dark:text-gray-400">
-              Transforming ideas into powerful, efficient, and scalable software
-              solutions.
+            <p className="max-w-[600px] text-lg sm:text-xl md:text-2xl text-gray-200">
+              Transforming ideas into powerful, efficient, and scalable software solutions.
             </p>
-          </div>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <button className="rounded-md shadow-xl py-2 px-4 border border-transparent text-center text-sm text-foreground hover:text-white   hover:bg-secondary border-accent active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
-              Get Started
-            </button>
-            <button className="rounded-md shadow-xl border border-secondary py-2 px-4 text-center text-sm  text-foreground hover:text-white hover:bg-accent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-              Learn More
-            </button>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+              <button className="px-8 py-3 bg-accent text-primary font-semibold rounded-md hover:bg-accent/90 transition-colors duration-200">
+                Get Started
+              </button>
+              <button className="px-8 py-3 bg-transparent text-white border-2 border-white font-semibold rounded-md hover:bg-white/10 transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };

@@ -5,15 +5,15 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0A2463",
+          DEFAULT: "#1E3A8A",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#3BCEAC",
+          DEFAULT: "#60A5FA",
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#EE6C4D",
+          DEFAULT: "#FCD34D",
           foreground: "#FFFFFF",
         },
         background: "#F5F5F5",
