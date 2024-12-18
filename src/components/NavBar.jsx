@@ -5,7 +5,7 @@ export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-white">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-primary via-secondary to-accent">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <a href="#" className="flex items-center space-x-2">
             <Code className="h-8 w-8" />
