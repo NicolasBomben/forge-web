@@ -11,37 +11,37 @@ export const Services = () => {
       }}></div>
       
       <div className="container mx-auto relative z-10">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary">Our Services</h2>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary">Nuestros Servicios</h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <ServiceCard 
             icon={<Laptop className="h-12 w-12 mb-4 text-secondary" />}
-            title="Web Development"
-            description="Creating responsive and dynamic websites tailored to your needs."
+            title="Desarrollo Web"
+            description="Creamos sitios web responsivos y dinámicos adaptados a tus necesidades."
           />
           <ServiceCard 
             icon={<Code className="h-12 w-12 mb-4 text-secondary" />}
-            title="Custom Software Solutions"
-            description="Developing bespoke software to address your unique business challenges."
+            title="Soluciones de Software Personalizadas"
+            description="Desarrollamos software a medida para abordar tus desafíos empresariales únicos."
           />
           <ServiceCard 
             icon={<Palette className="h-12 w-12 mb-4 text-secondary" />}
-            title="Web Design"
-            description="Crafting visually stunning and user-friendly interfaces for your digital presence."
+            title="Diseño Web"
+            description="Diseñamos interfaces visualmente atractivas y fáciles de usar para tu presencia digital."
           />
           <ServiceCard 
             icon={<Search className="h-12 w-12 mb-4 text-secondary" />}
-            title="SEO Services"
-            description="Optimizing your online presence to improve visibility and drive organic traffic."
+            title="Servicios SEO"
+            description="Optimizamos tu precensia en línea para mejorar tu visibilidad y atraer tràfico orgánico."
           />
           <ServiceCard 
             icon={<BarChart className="h-12 w-12 mb-4 text-secondary" />}
-            title="Analytics Services"
-            description="Providing data-driven insights to inform your business decisions and strategies."
+            title="Servicios de Análisis"
+            description="Proporcionamos insights basados en datos para informar tus decisiones y estrategias de negocio."
           />
           <ServiceCard 
             icon={<WrenchIcon className="h-12 w-12 mb-4 text-secondary" />}
-            title="Maintenance"
-            description="Ensuring your digital assets remain up-to-date, secure, and performing optimally."
+            title="Mantenimiento"
+            description="Aseguramos que tus activos digitales se mantengan actualizados, seguros y funcionando de manera óptima."
           />
         </div>
       </div>
@@ -53,7 +53,7 @@ function ServiceCard({ icon, title, description }) {
   return (
     <div className="flex flex-col items-center space-y-2 p-6 rounded-lg bg-white dark:bg-gray-800 shadow-lg transition-transform hover:scale-105">
       {icon}
-      <h3 className="text-xl font-bold text-primary">{title}</h3>
+      <h3 className="text-xl text-center font-bold text-primary">{title}</h3>
       <p className="text-sm text-text-light dark:text-text-dark text-center mb-4">
         {description}
       </p>

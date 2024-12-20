@@ -10,7 +10,7 @@ export const Clients = () => {
       className="w-full py-12 md:py-24 lg:py-32 bg-[#f7f9fc] px-4 md:px-6 overflow-hidden"
     >
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+        <h2 className="text-3xl text-primary font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
           Trusted Clients
         </h2>
 
