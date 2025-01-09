@@ -1,10 +1,10 @@
 import { NavBar } from "../components/NavBar";
-import { Hero } from "../components/Hero";
-import { Services } from "../components/Services";
+import { HeroSection } from "../components/HeroSection";
+import { ServiceSection } from "../components/ServiceSection";
 import { PricingPlans } from "../components/PricingPlans";
-import { Clients } from "../components/Clients";
-import { About } from "../components/About";
-import { Contact } from "../components/Contact";
+import { ClientsSection } from "../components/ClientsSection";
+import { AboutSection } from "../components/AboutSection";
+import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 
 export const Layout = () => {
@@ -12,12 +12,12 @@ export const Layout = () => {
     <div className="flex flex-col min-h-screen">
       <NavBar />
       <main className="flex-1">
-        <Hero />
-        <Services />
+        <HeroSection />
+        <AboutSection />
+        <ServiceSection />
         <PricingPlans />
-        <Clients />
-        <About />
-        <Contact />
+        <ClientsSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>

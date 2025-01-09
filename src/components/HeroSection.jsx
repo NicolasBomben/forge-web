@@ -1,4 +1,4 @@
-export const Hero = () => {
+export const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center w-full py-12 md:py-24 lg:py-32 px-4 md:px-6 bg-gradient-to-b from-violet-100 to-white overflow-hidden relative">
       <div className="container mx-auto relative z-10 pt-16">
@@ -12,11 +12,12 @@ export const Hero = () => {
             escalables.
           </p>
           <div className="mt-10">
-            <button
+            <a
+              href="#services"
               className="px-8 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90 transition-colors duration-200"
             >
               Descubre Nuestros Servicios
-            </button>
+            </a>
           </div>
         </div>
       </div>

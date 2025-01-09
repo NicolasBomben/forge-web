@@ -46,11 +46,11 @@ const services = [
   },
 ];
 
-export const Services = () => {
+export const ServiceSection = () => {
   return (
     <section
       id="services"
-      className="min-h-screen flex items-center w-full py-12 md:py-24 lg:py-32 bg-background-light dark:bg-background-dark px-4 md:px-6 relative"
+      className="min-h-screen flex items-center w-full py-12 md:py-24 lg:py-32 px-4 md:px-6 relative"
     >
       {/* Small circles background */}
       <div
@@ -64,7 +64,7 @@ export const Services = () => {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-gray-900">
-            Nuestros Servicios
+            Our Services
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Comprehensive web development solutions tailored to your business

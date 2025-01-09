@@ -1,17 +1,72 @@
+import { Linkedin, ArrowUp, Github } from 'lucide-react';
 
 export const Footer = () => {
+
+  const currentYear = new Date().getFullYear();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
+  };
+
+
   return (
-    <footer className="w-full py-6 px-4 md:px-6 border-t">
-        <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-xs text-gray-500 dark:text-gray-400 mb-4 sm:mb-0">© 2023 Your Name. All rights reserved.</p>
-          <nav className="flex gap-4 sm:gap-6">
-            <a className="text-xs hover:underline underline-offset-4" href="#">
-              Terms of Service
+    <footer className="bg-gray-900 text-white py-8 mt-auto">
+        <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          {/* Contact Info */}
+          <div className="text-center md:text-left">
+            <a
+              href="mailto:bomben.dev@gmail.com"
+              className="text-gray-300 hover:text-white transition-colors"
+              aria-label="Send email to bomben.dev@gmail.com"
+            >
+              bomben.dev@gmail.com
             </a>
-            <a className="text-xs hover:underline underline-offset-4" href="#">
-              Privacy
+          </div>
+
+          {/* Social Links */}
+          <div className="flex justify-center gap-6">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors"
+              aria-label="Visit our GitHub profile"
+            >
+              <Github className="w-6 h-6" />
             </a>
-          </nav>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors"
+              aria-label="Visit our LinkedIn profile"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
+          </div>
+
+          {/* Back to Top Button */}
+          <div className="text-right hidden md:block">
+            <button
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              aria-label="Scroll back to top"
+            >
+              <span>Back to top</span>
+              <ArrowUp className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* Copyright Notice */}
+        <div className="mt-8 text-center text-gray-400 text-sm">
+          <p>All rights reserved by BombenDev © {currentYear}</p>
+        </div>
         </div>
       </footer>
   )
