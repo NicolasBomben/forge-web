@@ -64,11 +64,10 @@ export const ServiceSection = () => {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-gray-900">
-            Our Services
+            Nuestros Servicios
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Comprehensive web development solutions tailored to your business
-            needs
+            Soluciones integrales de desarrollo web adaptadas a las necesidades de tu negocio.
           </p>
         </div>
         {/* Render cards. */}
