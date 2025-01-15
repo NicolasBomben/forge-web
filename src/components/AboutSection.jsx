@@ -1,3 +1,6 @@
+import { PopupButton } from "react-calendly";
+import { CalendarDays } from "lucide-react";
+
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 bg-gray-50">
@@ -6,7 +9,7 @@ export const AboutSection = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Nuestra Misión
           </h2>
-          <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl text-center">
+          <p className="mx-auto max-w-[600px] text-gray-600 md:text-xl text-center">
             Potenciando a las empresas con soluciones digitales innovadoras
           </p>
         </div>
@@ -30,10 +33,13 @@ export const AboutSection = () => {
             </p>
           </div>
           <div className="mt-12 text-center">
-            <a href="#contact">
-              <button className="bg-primary text-white px-8 py-3 rounded-md hover:bg-primary/90 transition-colors">
-                Conversemos sobre tu proyecto.
-              </button>
+            <a className="inline-flex items-center justify-center gap-2 h-11 rounded-md px-8 bg-primary hover:bg-primary/90 text-white font-medium transition-colors">
+              <PopupButton
+                url="https://calendly.com/nicolasbomben"
+                rootElement={document.getElementById("root")}
+                text="Conversemos sobre tu proyecto."
+              />
+              <CalendarDays className="h-4 w-4 ml-2"/>
             </a>
           </div>
         </div>

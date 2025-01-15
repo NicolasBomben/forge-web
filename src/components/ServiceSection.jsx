@@ -11,37 +11,37 @@ const services = [
   {
     title: "Landin Pages",
     description:
-      "High-converting landing pages designed to capture leads through forms or schedule meetings",
+      "Landing Pages de alto rendimiento diseñadas para captar clientes potenciales a través de formularios o agendar reuniones.",
     icon: FileText,
   },
   {
-    title: "Institutional Websites",
+    title: "Sitios Web Profesionales",
     description:
-      "Professional websites ideal for factories and businesses looking to establish their online presence",
+      "Sitios web profesionales ideales para fábricas y negocios que buscan establecer su presencia online.",
     icon: Building,
   },
   {
     title: "E-commerce",
     description:
-      "Complete and functional online stores whith secure payment proccesing and inventory management",
+      "Tiendas online completas y funcionales con procesamiento de pagos seguro y gestión de inventario.",
     icon: ShoppingCart,
   },
   {
-    title: "Web Desing and UX/UI",
+    title: "Diseño Web y UX/UI",
     description:
-      "Professional desing and user experience optimization to ensure your website stands out",
+      "Diseño atractivo y experiencia de usuario optimizada para hacer destacar tu sitio web.",
     icon: Layout,
   },
   {
     title: "SEO",
     description:
-      "Search engine optimization patches, and technical support to keep your website running smoothly",
+      "Optimización para motores de búsqueda y soporte técnico para mantener tu sitio web funcionando sin problemas.",
     icon: Search,
   },
   {
-    title: "Maintenance",
+    title: "Mantenimiento",
     description:
-      "Continuous updates, security patches, and technical support to keep your website running smoothly",
+      "Actualizaciones continuas, parches de seguridad y soporte técnico para mantener tu sitio web funcionando sin inconvenientes.",
     icon: Settings,
   },
 ];
@@ -66,8 +66,8 @@ export const ServiceSection = () => {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-gray-900">
             Nuestros Servicios
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Soluciones integrales de desarrollo web adaptadas a las necesidades de tu negocio.
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl">
+            Desarrollo web a la medida de tu negocio.
           </p>
         </div>
         {/* Render cards. */}
@@ -75,7 +75,7 @@ export const ServiceSection = () => {
           {services.map((services, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-6"
+              className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-6 hover:border-secondary border-2 border-transparent"
             >
               <div className="mb-4">
                 <div className="w-12 h-12 bg-primary/10 roundel-lg flex items-center justify-center mb-4">
