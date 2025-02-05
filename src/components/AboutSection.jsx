@@ -1,35 +1,26 @@
+import { useTranslation } from "react-i18next";
 import { PopupButton } from "react-calendly";
 import { CalendarDays } from "lucide-react";
 
 export const AboutSection = () => {
+
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="py-24 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Nuestra Misión
+            {t("ourMissionTitle")}
           </h2>
           <p className="mx-auto max-w-[600px] text-gray-600 md:text-xl text-center">
-            Potenciando a las empresas con soluciones digitales innovadoras
+            {t("ourMissionSubTitle")}
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8 text-gray-600">
-            <p className="text-lg leading-relaxed">
-              Nos apasiona ayudar a pequeñas y medianas empresas a prosperar en
-              la era digital. Con una sólida formación académica y una
-              perspectiva fresca, aportamos soluciones innovadoras para
-              enfrentar los desafíos únicos que enfrentas.
-            </p>
-            <p className="text-lg leading-relaxed">
-              <span className="text-primary font-semibold">
-                Nuestra misión es simple:
-              </span>{" "}
-              proporcionar soluciones digitales de vanguardia que hagan crecer
-              tu negocio. Ya sea que necesites un sitio web impresionante, una
-              plataforma de comercio electrónico eficiente o una optimización
-              estratégica de SEO, estamos aquí para hacer realidad tu visión
-              digital.
+            <p className="text-lg leading-relaxed text-center">
+            {t("ourMissionText")}
             </p>
           </div>
           <div className="mt-12 text-center">
@@ -37,7 +28,7 @@ export const AboutSection = () => {
               <PopupButton
                 url="https://calendly.com/nicolasbomben"
                 rootElement={document.getElementById("root")}
-                text="Conversemos sobre tu proyecto."
+                text={t("ourServicesButton")}
               />
               <CalendarDays className="h-4 w-4 ml-2"/>
             </a>

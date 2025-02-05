@@ -1,7 +1,11 @@
 import { useSpring, animated } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 import { Rocket } from "lucide-react";
 
 export const HeroSection = () => {
+
+  const { t } = useTranslation();
+
   {
     /* H1 animation */
   }
@@ -45,9 +49,9 @@ export const HeroSection = () => {
             style={h1Animation}
             className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-900"
           >
-            Transforma Tu Negocio
+            {t("mainTitle")}
             <animated.span style={spanAnimation} className="block text-primary">
-              Con Desarrollo Web Profesional
+              {t("mainTitleSub")}
             </animated.span>
           </animated.h1>
 
@@ -55,8 +59,7 @@ export const HeroSection = () => {
             style={pAnimation}
             className="mt-6 max-w-[600px] text-lg sm:text-xl md:text-2xl text-gray-600"
           >
-            Transformamos ideas en soluciones de software potentes, eficientes y
-            escalables.
+            {t("subTitle")}
           </animated.p>
 
           <animated.button 
@@ -66,7 +69,7 @@ export const HeroSection = () => {
               href="#services"
               className="inline-flex items-center justify-center gap-2 h-11 rounded-md px-8 bg-primary hover:bg-primary/90 text-white font-medium transition-colors"
             >
-              Descubre Nuestros Servicios
+              {t("buttonMain")}
               <Rocket className="w-4 h-4 ml-2" />
             </a>
           </animated.button>

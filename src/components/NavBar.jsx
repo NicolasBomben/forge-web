@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Code, Menu, X } from "lucide-react";
 
+import { LanguageToggle } from "./LanguageToggle";
+
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -24,6 +26,8 @@ export const NavBar = () => {
           <a href="#contact" className="text-gray-900 ">
             Contact
           </a>
+
+          <LanguageToggle />
         </nav>
         <button
           className="md:hidden text-white"
@@ -67,6 +71,9 @@ export const NavBar = () => {
             >
               Contact
             </a>
+            <div className="px-3 py-2">
+              <LanguageToggle />
+            </div>
           </div>
         </nav>
       )}
