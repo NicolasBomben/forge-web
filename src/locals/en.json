@@ -1,0 +1,38 @@
+{
+  "mainTitle": "Boost Your Business",
+  "mainTitleSub": "With Professional Web Development",
+  "subTitle": "We transform ideas into powerful, efficient, and scalable software solutions.",
+  "buttonMain": "Discover Our Services",
+  "ourMissionTitle": "Our Mission",
+  "ourMissionSubTitle": "Empowering businesses whit innovate digital solutions.",
+  "ourMissionText": "We are passionate about helping small and medium-sized businesses thrive in the digital age. With a solid academic background and a fresh perspective, we bring innovative solutions to face the unique challenges you face. Our mission is simple: to provide cutting-edge digital solutions that grow your business. Whether you need a stunning website, an efficient e-commerce platform, or strategic SEO optimization, we are here to bring your digital vision to life.",
+  "ourServicesButton": "Let's talk about your project.",
+  "servicesTitle": "Our Services",
+  "servicesSubTitle": "Web development designed for your business success.",
+  "services": {
+    "landingPages": {
+      "title": "Landing Pages",
+      "description": "High-converting landing pages designed to capture leads through forms or schedule meetings."
+    },
+    "sitiosWeb": {
+      "title": "Professional Websites",
+      "description": "Professional websites ideal for factories and businesses looking to establish their online presence."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Complete and functional online stores with secure payment processing and inventory management."
+    },
+    "uxUi": {
+      "title": "Web Design & UX/UI",
+      "description": "Professional desing and user experience optimization to ensure your website stands out."
+    },
+    "seo": {
+      "title": "SEO",
+      "description": "Search engine optimization and technical support to keep your website running smoothly."
+    },
+    "mantenimiento": {
+      "title": "Maintenance",
+      "description": "Continuous updates, security patches, and technical support to keep your website trouble-free."
+    }
+  }
+}

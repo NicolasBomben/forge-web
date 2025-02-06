@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   FileText,
   Building,
@@ -7,46 +8,18 @@ import {
   Settings,
 } from "lucide-react";
 
-const services = [
-  {
-    title: "Landin Pages",
-    description:
-      "Landing Pages de alto rendimiento diseñadas para captar clientes potenciales a través de formularios o agendar reuniones.",
-    icon: FileText,
-  },
-  {
-    title: "Sitios Web Profesionales",
-    description:
-      "Sitios web profesionales ideales para fábricas y negocios que buscan establecer su presencia online.",
-    icon: Building,
-  },
-  {
-    title: "E-commerce",
-    description:
-      "Tiendas online completas y funcionales con procesamiento de pagos seguro y gestión de inventario.",
-    icon: ShoppingCart,
-  },
-  {
-    title: "Diseño Web y UX/UI",
-    description:
-      "Diseño atractivo y experiencia de usuario optimizada para hacer destacar tu sitio web.",
-    icon: Layout,
-  },
-  {
-    title: "SEO",
-    description:
-      "Optimización para motores de búsqueda y soporte técnico para mantener tu sitio web funcionando sin problemas.",
-    icon: Search,
-  },
-  {
-    title: "Mantenimiento",
-    description:
-      "Actualizaciones continuas, parches de seguridad y soporte técnico para mantener tu sitio web funcionando sin inconvenientes.",
-    icon: Settings,
-  },
-];
-
 export const ServiceSection = () => {
+  const { t } = useTranslation();
+
+  const services = [
+    {key: "landingPages", icon: FileText },
+    {key: "sitiosWeb", icon: Building },
+    {key: "ecommerce", icon: ShoppingCart },
+    {key: "uxUi", icon: Layout },
+    {key: "seo", icon: Search },
+    {key: "mantenimiento", icon: Settings },
+  ];
+
   return (
     <section
       id="services"
@@ -64,29 +37,29 @@ export const ServiceSection = () => {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-gray-900">
-            Nuestros Servicios
+            {t("servicesTitle")}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl">
-            Desarrollo web a la medida de tu negocio.
+            {t("servicesSubTitle")}
           </p>
         </div>
         {/* Render cards. */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((services, index) => (
+          {services.map(({key, icon: Icon}, index) => (
             <div
               key={index}
               className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-6 hover:border-secondary border-2 border-transparent"
             >
               <div className="mb-4">
                 <div className="w-12 h-12 bg-primary/10 roundel-lg flex items-center justify-center mb-4">
-                  <services.icon className="w-6 h-6 text-primary" />
+                  <Icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-2">
-                  {services.title}
+                  {t(`services.${key}.title`)}
                 </h3>
               </div>
               <div>
-                <p className="text-gray-600">{services.description}</p>
+                <p className="text-gray-600">{t(`services.${key}.description`)}</p>
               </div>
             </div>
           ))}

@@ -1,0 +1,39 @@
+{
+  "mainTitle": "Transforma Tu Negocio",
+  "mainTitleSub": "Con Desarrollo Web Profesional",
+  "subTitle": "Transformamos ideas en soluciones de software potentes, eficientes y escalables.",
+  "buttonMain": "Descubre Nuestros Servicios",
+  "ourMissionTitle": "Nuestra Misión",
+  "ourMissionSubTitle": "Potenciando a las empresas con soluciones digitales innovadoras",
+  "ourMissionText": "Nos apasiona ayudar a pequeñas y medianas empresas a prosperar en la era digital. Con una sólida formación académica y una perspectiva fresca, aportamos soluciones innovadoras para enfrentar los desafíos únicos que enfrentas.Nuestra misión es simple: proporcionar soluciones digitales de vanguardia que hagan crecer tu negocio. Ya sea que necesites un sitio web impresionante, una plataforma de comercio electrónico eficiente o una optimización estratégica de SEO, estamos aquí para hacer realidad tu visión digital.",
+  "ourServicesButton": "Conversemos sobre tu proyecto.",
+  "servicesTitle": "Nuestros Servicios",
+  "servicesSubTitle": "Desarrollo web a la medida de tu negocio.",
+
+  "services": {
+    "landingPages": {
+      "title": "Landing Pages",
+      "description": "Landing Pages de alto rendimiento diseñadas para captar clientes potenciales a través de formularios o agendar reuniones."
+    },
+    "sitiosWeb": {
+      "title": "Sitios Web Profesionales",
+      "description": "Sitios web profesionales ideales para fábricas y negocios que buscan establecer su presencia online."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Tiendas online completas y funcionales con procesamiento de pagos seguro y gestión de inventario."
+    },
+    "uxUi": {
+      "title": "Diseño Web y UX/UI",
+      "description": "Diseño atractivo y experiencia de usuario optimizada para hacer destacar tu sitio web."
+    },
+    "seo": {
+      "title": "SEO",
+      "description": "Optimización para motores de búsqueda y soporte técnico para mantener tu sitio web funcionando sin problemas."
+    },
+    "mantenimiento": {
+      "title": "Mantenimiento",
+      "description": "Actualizaciones continuas, parches de seguridad y soporte técnico para mantener tu sitio web funcionando sin inconvenientes."
+    }
+  }
+}
