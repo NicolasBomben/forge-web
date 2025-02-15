@@ -19,6 +19,7 @@ export default {
         background: "#F5F5F5",
         foreground: "#333333",
       },
+      
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -34,8 +35,8 @@ export default {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.4s ease-out",
-        "accordion-up": "accordion-up 0.4s ease-out",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
         fadeIn: "fadeIn 0.5s ease-out forwards",
       },
 

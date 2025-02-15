@@ -1,45 +1,38 @@
+import { useTranslation } from "react-i18next";
+import { useMemo } from "react";
 import { Check } from "lucide-react";
 
-const pricingPlans = [
-  {
-    name: "Basic",
-    description: "Perfect for small businesses and startups",
-    features: [
-      "Custom Website Development",
-      "Responsive Design",
-      "Basic SEO Optimization",
-      "3 Rounds of Revisions",
-      "1 Month Support",
-    ],
-  },
-  {
-    name: "Professional",
-    description: "Ideal for growing businesses",
-    features: [
-      "Everything in Basic",
-      "E-commerce Integration",
-      "Advanced SEO Package",
-      "Performance Optimization",
-      "3 Months Support",
-      "Priority Response",
-    ],
-    popular: true,
-  },
-  {
-    name: "Enterprise",
-    description: "For large-scale projects",
-    features: [
-      "Everything in Professional",
-      "Custom Features Development",
-      "API Integration",
-      "Database Design",
-      "12 Months Support",
-      "Dedicated Project Manager",
-    ],
-  },
-];
 
 export const PricingPlans = () => {
+
+  const { t } = useTranslation();
+
+  const translations = useMemo(() => ({
+    title: t("pricing.pricingTitle"),
+    subtitle: t("pricing.pricingSubtitle"),
+    mostPopular: t("pricing.pricingMostPopular"),
+    button: t("pricing.pricingButton"),
+    plans: [
+      {
+        key: "basic",
+        popular: false,
+      },
+      {
+        key: "professional",
+        popular: true,
+      },
+      {
+        key: "enterprise",
+        popular: false,
+      },
+    ].map((plan) => ({
+      ...plan,
+      name: t(`pricing.${plan.key}.name`),
+      description: t(`pricing.${plan.key}.description`),
+      features: t(`pricing.${plan.key}.features`, { returnObjects: true }),
+    })),
+  }), [t]);
+
   return (
     <section
       id="pricing"
@@ -48,15 +41,14 @@ export const PricingPlans = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-            Simple, Transparent Pricing
+            {translations.title}
           </h2>
           <p className="text-gray-600 mb-4">
-            Choose the perfect plan for your business. Contact us to get a
-            customized quote tailored to your specefic requirements.
+            {translations.subtitle}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {pricingPlans.map((plan, index) => (
+          {translations.plans.map((plan, index) => (
             <div
               key={index}
               className={`relative bg-white rounded-lg border ${
@@ -68,7 +60,7 @@ export const PricingPlans = () => {
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="bg-primary text-white px-3 py-1 rounded-full text-sm">
-                    Most Popular
+                    {translations.mostPopular}
                   </span>
                 </div>
               )}
@@ -97,7 +89,7 @@ export const PricingPlans = () => {
                     plan.popular ? "bg-primary" : "bg-secondary"
                   } hover:opacity-90 transition-opacity`}
                 >
-                  Get Custom Quote
+                  {translations.button}
                 </button>
               </div>
             </div>

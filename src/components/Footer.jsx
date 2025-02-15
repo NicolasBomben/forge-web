@@ -51,7 +51,7 @@ export const Footer = () => {
           </div>
 
           {/* Back to Top Button */}
-          <div className="text-right hidden md:block">
+          <div className="text-right block">
             <button
               onClick={scrollToTop}
               className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"

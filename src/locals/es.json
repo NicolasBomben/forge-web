@@ -1,11 +1,17 @@
-{
+{ "navBar": {
+    "services": "Servicios",
+    "pricing": "Precios",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
   "mainTitle": "Transforma Tu Negocio",
   "mainTitleSub": "Con Desarrollo Web Profesional",
   "subTitle": "Transformamos ideas en soluciones de software potentes, eficientes y escalables.",
   "buttonMain": "Descubre Nuestros Servicios",
   "ourMissionTitle": "Nuestra Misión",
   "ourMissionSubTitle": "Potenciando a las empresas con soluciones digitales innovadoras",
-  "ourMissionText": "Nos apasiona ayudar a pequeñas y medianas empresas a prosperar en la era digital. Con una sólida formación académica y una perspectiva fresca, aportamos soluciones innovadoras para enfrentar los desafíos únicos que enfrentas.Nuestra misión es simple: proporcionar soluciones digitales de vanguardia que hagan crecer tu negocio. Ya sea que necesites un sitio web impresionante, una plataforma de comercio electrónico eficiente o una optimización estratégica de SEO, estamos aquí para hacer realidad tu visión digital.",
+  "ourMissionText": "Nos apasiona ayudar a pequeñas y medianas empresas a prosperar en la era digital. Con una sólida formación académica y una perspectiva fresca, aportamos soluciones innovadoras para enfrentar los desafíos únicos que enfrentas.",
+  "ourMissionTextSecond": "Nuestra misión es simple: proporcionar soluciones digitales de vanguardia que hagan crecer tu negocio. Ya sea que necesites un sitio web impresionante, una plataforma de comercio electrónico eficiente o una optimización estratégica de SEO, estamos aquí para hacer realidad tu visión digital.",
   "ourServicesButton": "Conversemos sobre tu proyecto.",
   "servicesTitle": "Nuestros Servicios",
   "servicesSubTitle": "Desarrollo web a la medida de tu negocio.",
@@ -35,5 +41,84 @@
       "title": "Mantenimiento",
       "description": "Actualizaciones continuas, parches de seguridad y soporte técnico para mantener tu sitio web funcionando sin inconvenientes."
     }
+  },
+
+  "pricing": {
+    "pricingTitle": "Precios Simples y Transparentes",
+    "pricingSubtitle": "Elige el plan perfecto para tu negocio. Contáctanos para obtener una cotización personalizada según tus necesidades.",
+    "pricingMostPopular": "Más Popular",
+    "pricingButton": "Solicitá tu presupuesto",
+    "basic": {
+      "name": "Básico",
+      "description": "Ideal para pequeñas empresas y startups",
+      "features": [
+        "Desarrollo Web Personalizado",
+        "Diseño Responsivo",
+        "Optimización SEO Básica",
+        "3 Rondas de Revisión",
+        "1 Mes de Soporte"
+      ]
+    },
+    "professional": {
+      "name": "Profesional",
+      "description": "Ideal para negocios en crecimiento",
+      "features": [
+        "Todo lo del plan Básico",
+        "Integración de E-commerce",
+        "Paquete SEO Avanzado",
+        "Optimización de Rendimiento",
+        "3 Meses de Soporte",
+        "Respuesta Prioritaria"
+      ]
+    },
+    "enterprise": {
+      "name": "Empresarial",
+      "description": "Para proyectos a gran escala",
+      "features": [
+        "Todo lo del plan Profesional",
+        "Desarrollo de Funcionalidades Personalizadas",
+        "Integración de API",
+        "Diseño de Base de Datos",
+        "12 Meses de Soporte",
+        "Gerente de Proyecto Dedicado"
+      ]
+    }
+  },
+
+  "clients": {
+    "title": "Lo que dicen nuestros clientes",
+    "testimonials": [
+      {
+        "quote": "Gracias al trabajo realizado, logramos establecer con éxito nuestra presencia en el mundo digital, conectando con más clientes y expandiendo nuestro alcance en línea.",
+        "author": "Dataholics",
+        "website": "https://dataholics.site"
+      },
+      {
+        "quote": "Quería algo simple pero profesional para mostrar mi negocio y los servicios que ofrezco. El resultado superó mis expectativas y me dio una base sólida para crecer.",
+        "author": "Boschetti Bordoni",
+        "website": "https://boschettibordoni.com.ar"
+      },
+      {
+        "quote": "Queríamos darle un nuevo aspecto a nuestro sitio web: más minimalista, limpio y moderno. No solo logramos ese objetivo, sino que también obtuvimos una herramienta poderosa para que los clientes dejen su información de contacto. Ha sido increíblemente útil para nosotros.",
+        "author": "Telmec",
+        "website": "https://telmec.com.ar"
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Contactanos",
+    "namePlaceholder": "Tu Nombre",
+    "emailPlaceholder": "Tu Correo Electrónico",
+    "selectService": "Selecciona un servicio",
+    "services": {
+      "landingPage": "Landing Page",
+      "institutionalWebsite": "Sitio Web Institucional",
+      "ecommerce": "E-commerce",
+      "customWebsite": "Sitio Web a Medida"
+    },
+    "messagePlaceholder": "Tu Mensaje",
+    "submitButton": "Enviar Mensaje",
+    "alertMessage": "¡Mensaje enviado! Nos pondremos en contacto contigo lo antes posible."
   }
 }

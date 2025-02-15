@@ -1,27 +1,15 @@
+import { useTranslation } from "react-i18next";
+import { useMemo } from "react";
 import { Globe } from "lucide-react";
 
-const testiomonials = [
-  {
-    quote:
-      "Thanks to the work done, we successfully established our presence in the digital world, connecting with more clients and effectively expanding our online reach.",
-    author: "Dataholics",
-    website: "https://dataholics.site",
-  },
-  {
-    quote:
-      "I wanted something simple yet professional to showcase my business and the services I offer. The result exceeded my expectations and provided a solid foundation for growth.",
-    author: "Boschetti Bordoni",
-    website: "https://boschettibordoni.com.ar",
-  },
-  {
-    quote:
-      "We wanted to give our website a fresh look: more minimalist, clean, and modern. Not only did we achieve that goal, but we also gained a powerful tool for clients to leave their contact information. It has been incredibly useful for us.",
-    author: "Telmec",
-    website: "https://telmec.com.ar",
-  },
-];
+
 
 export const ClientsSection = () => {
+
+  const { t } = useTranslation();
+
+  const testimonials = useMemo(() => t("clients.testimonials", { returnObjects: true }), [t]);
+
   return (
     <section id="clients" className="py-24 relative">
       
@@ -36,10 +24,10 @@ export const ClientsSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">
-          What Our Clients Say
+          {t("clients.title")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testiomonials.map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="bg-white rounded-lg shadow-lg p-6 border-none"

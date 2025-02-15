@@ -18,9 +18,13 @@ export const AboutSection = () => {
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-8 text-gray-600">
-            <p className="text-lg leading-relaxed text-center">
+          <div className="space-y-6 sm:space-y-8">
+            <p className="text-base sm:text-lg leading-relaxed text-gray-600 px-4 sm:px-6">
             {t("ourMissionText")}
+            </p>
+
+            <p className="text-base sm:text-lg leading-relaxed text-gray-600 px-4 sm:px-6">
+            {t("ourMissionTextSecond")}
             </p>
           </div>
           <div className="mt-12 text-center">
