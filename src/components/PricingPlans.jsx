@@ -1,37 +1,45 @@
 import { useTranslation } from "react-i18next";
 import { useMemo } from "react";
 import { Check } from "lucide-react";
-
+import { FaWhatsapp } from "react-icons/fa";
 
 export const PricingPlans = () => {
-
   const { t } = useTranslation();
 
-  const translations = useMemo(() => ({
-    title: t("pricing.pricingTitle"),
-    subtitle: t("pricing.pricingSubtitle"),
-    mostPopular: t("pricing.pricingMostPopular"),
-    button: t("pricing.pricingButton"),
-    plans: [
-      {
-        key: "basic",
-        popular: false,
-      },
-      {
-        key: "professional",
-        popular: true,
-      },
-      {
-        key: "enterprise",
-        popular: false,
-      },
-    ].map((plan) => ({
-      ...plan,
-      name: t(`pricing.${plan.key}.name`),
-      description: t(`pricing.${plan.key}.description`),
-      features: t(`pricing.${plan.key}.features`, { returnObjects: true }),
-    })),
-  }), [t]);
+  const translations = useMemo(
+    () => ({
+      title: t("pricing.pricingTitle"),
+      subtitle: t("pricing.pricingSubtitle"),
+      mostPopular: t("pricing.pricingMostPopular"),
+      button: t("pricing.pricingButton"),
+      plans: [
+        {
+          key: "basic",
+          popular: false,
+        },
+        {
+          key: "professional",
+          popular: true,
+        },
+        {
+          key: "enterprise",
+          popular: false,
+        },
+      ].map((plan) => ({
+        ...plan,
+        name: t(`pricing.${plan.key}.name`),
+        description: t(`pricing.${plan.key}.description`),
+        features: t(`pricing.${plan.key}.features`, { returnObjects: true }),
+      })),
+    }),
+    [t]
+  );
+
+  //whatsapp.
+  const phoneNumber = "5491157628934";
+  const message = encodeURIComponent("Hola, me interesa uno de tus servicios.");
+
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
     <section
@@ -43,9 +51,7 @@ export const PricingPlans = () => {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
             {translations.title}
           </h2>
-          <p className="text-gray-600 mb-4">
-            {translations.subtitle}
-          </p>
+          <p className="text-gray-600 mb-4">{translations.subtitle}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {translations.plans.map((plan, index) => (
@@ -88,8 +94,10 @@ export const PricingPlans = () => {
                   className={`w-full px-4 py-2 rounded-md text-white ${
                     plan.popular ? "bg-primary" : "bg-secondary"
                   } hover:opacity-90 transition-opacity`}
+                  onClick={() => window.open(whatsappUrl, "_blank")}
                 >
                   {translations.button}
+                  <FaWhatsapp className="inline-block h-5 w-5 ml-2" />
                 </button>
               </div>
             </div>

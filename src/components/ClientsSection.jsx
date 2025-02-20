@@ -13,7 +13,7 @@ export const ClientsSection = () => {
   return (
     <section id="clients" className="py-24 relative">
       
-      {/* Small circles background */}
+      {/* circles background */}
       <div
         className="absolute inset-0 opacity-10 dark:opacity-20"
         style={{
@@ -46,7 +46,7 @@ export const ClientsSection = () => {
                     className="text-primary hover:text-primary/80 transition-colors flex gap-2"
                     aria-label={`Visit ${testimonial.author}'s website`}
                   >
-                    Visit Website
+                    {t("clients.visitSite")}
                     <Globe size={20}/>
                   </a>
                 </div>
