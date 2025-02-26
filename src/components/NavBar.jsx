@@ -51,6 +51,9 @@ export const NavBar = () => {
         </div>
       </header>
 
+      <div className="md:hidden fixed top-1 left-2 z-[60]">
+        <img src={Logo} alt="" className="h-16 w-auto" />
+      </div>
       {/* Botón para abrir menú en móvil */}
       <button
         className="md:hidden fixed top-4 right-4 z-[60] text-primary bg-white p-2 rounded-md shadow-md"
