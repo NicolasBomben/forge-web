@@ -1,6 +1,7 @@
 import { X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LanguageToggle } from "./LanguageToggle";
+import LogoMobile from "/assets/logo-mobile.svg";
 
 export const NavMobile = ({ isMenuOpen, setIsMenuOpen }) => {
   const { t } = useTranslation();
@@ -32,6 +33,9 @@ export const NavMobile = ({ isMenuOpen, setIsMenuOpen }) => {
       </div>
       <div className="flex justify-center py-4">
         <LanguageToggle />
+      </div>
+      <div>
+        <img src={LogoMobile} alt="mobile-logo-forgeTech" />
       </div>
     </nav>
   );

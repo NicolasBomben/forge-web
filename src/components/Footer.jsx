@@ -1,5 +1,6 @@
 import { ArrowUp, Mail } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
+import Logo from "/assets/logo-footer.svg";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,8 +17,8 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* Logo */}
-          <div className="text-center">
-            <h1 className="text-2xl font-bold">BombenDev</h1>
+          <div>
+            <img src={Logo} alt="logo-forgeTech" />
           </div>
 
           {/* Social Links */}

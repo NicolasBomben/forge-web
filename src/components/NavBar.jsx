@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Code, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { LanguageToggle } from "./LanguageToggle";
 import { NavMobile } from "./NavMobile";
+import Logo from "/assets/logo-forge.svg";
 
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,20 +24,25 @@ export const NavBar = () => {
 
   return (
     <>
-      {/* Navbar de escritorio */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out delay-200 hidden md:block ${
           isVisible ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"
         }`}
       >
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="#" className="flex items-center space-x-2">
-            <Code className="h-8 w-8 text-gray-900" />
-            <span className="text-primary text-xl font-bold">DevCo</span>
-          </a>
-          <nav className="flex space-x-6">
+        <div className="container mx-auto px-4 flex items-center justify-between">
+          {/* Logo centrado */}
+          <div className="flex justify-center py-1">
+            <img src={Logo} alt="logo forgeTech" className="h-16 w-auto" />
+          </div>
+
+          {/* Barra de navegación a la derecha */}
+          <nav className="flex space-x-6 items-center py-1">
             {navItems.map((item) => (
-              <a key={item} href={`#${item}`} className="text-gray-900 hover:text-white transition">
+              <a
+                key={item}
+                href={`#${item}`}
+                className="text-gray-900 hover:text-white transition"
+              >
                 {t(`navBar.${item}`)}
               </a>
             ))}
