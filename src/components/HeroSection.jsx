@@ -47,7 +47,7 @@ export const HeroSection = () => {
         <div className="flex flex-col items-center space-y-4 text-center">
           <animated.h1
             style={h1Animation}
-            className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-900"
+            className="font-poppins font-bold text-4xl tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-900"
           >
             {t("mainTitle")}
             <animated.span style={spanAnimation} className="block text-primary">
@@ -57,7 +57,7 @@ export const HeroSection = () => {
 
           <animated.p
             style={pAnimation}
-            className="mt-6 max-w-[600px] text-lg sm:text-xl md:text-2xl text-gray-600"
+            className="mt-6 max-w-[600px] font-poppins font-normal text-lg sm:text-xl md:text-2xl text-gray-600"
           >
             {t("subTitle")}
           </animated.p>
@@ -67,7 +67,7 @@ export const HeroSection = () => {
               className="mt-10">
             <a
               href="#services"
-              className="inline-flex items-center justify-center gap-2 h-11 rounded-md px-8 bg-primary hover:bg-primary/90 text-white font-medium transition-colors"
+              className="inline-flex items-center justify-center gap-2 h-11 rounded-md px-8 bg-primary hover:bg-primary/90 text-white font-poppins font-light transition-colors"
             >
               {t("buttonMain")}
               <Rocket className="w-4 h-4 ml-2" />
