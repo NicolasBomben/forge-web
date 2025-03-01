@@ -34,14 +34,14 @@ export const ServiceSection = () => {
         }}
       ></div>
 
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto relative z-10 font-poppins">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-gray-900">
             {t("servicesTitle")}
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl">
+          <h3 className="font-medium text-gray-600  mx-auto text-lg sm:text-xl md:text-2xl">
             {t("servicesSubTitle")}
-          </p>
+          </h3>
         </div>
         {/* Render cards. */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -54,12 +54,12 @@ export const ServiceSection = () => {
                 <div className="w-12 h-12 bg-primary/10 roundel-lg flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-2">
+                <h3 className="text-2xl font-medium mb-2">
                   {t(`services.${key}.title`)}
                 </h3>
               </div>
               <div>
-                <p className="text-gray-600">{t(`services.${key}.description`)}</p>
+                <p className="font-normal text-gray-600">{t(`services.${key}.description`)}</p>
               </div>
             </div>
           ))}

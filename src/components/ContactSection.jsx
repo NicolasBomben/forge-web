@@ -53,7 +53,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-24 bg-gray-50 font-poppins">
       <div className="container mx-auto px-4 max-w-md md:max-w-lg lg:max-w-xl">
         <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl text-center mb-12">
           {t("contact.title")}
@@ -112,7 +112,7 @@ export const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md transition-colors"
+              className="w-full bg-primary hover:bg-primary/90 text-white font-light px-4 py-2 rounded-md transition-colors"
             >
               {t("contact.submitButton")}
             </button>

@@ -10,12 +10,12 @@ export const AboutSection = () => {
     <section id="about" className="py-24 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-poppins font-medium text-3xl sm:text-4xl md:text-5xl mb-4">
+          <h2 className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl mb-4">
             {t("ourMissionTitle")}
           </h2>
-          <p className="mx-auto max-w-[600px] text-gray-600 md:text-xl text-center font-poppins font-light">
+          <h3 className="font-poppins font-medium text-gray-600  mx-auto text-lg sm:text-xl md:text-2xl">
             {t("ourMissionSubTitle")}
-          </p>
+          </h3>
         </div>
         <div className="max-w-4xl mx-auto">
           <div className="font-poppins font-normal space-y-6 sm:space-y-8">

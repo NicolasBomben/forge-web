@@ -10,7 +10,7 @@ export const LanguageToggle = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center gap-2 rounded-md bg-primary text-white px-2"
+      className="flex items-center gap-2 rounded-md bg-primary text-white font-poppins font-light px-3"
     >
       <Globe className="w-4 h-4" />
       {i18next.language === "es" ? "ES/EN" : "EN/ES"}

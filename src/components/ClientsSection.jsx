@@ -22,7 +22,7 @@ export const ClientsSection = () => {
         }}
       ></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 font-poppins">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">
           {t("clients.title")}
         </h2>
@@ -36,14 +36,14 @@ export const ClientsSection = () => {
                 <div className="text-primary text-4xl">&quot;</div>
               </div>
               <div>
-                <p className="text-gray-700 mb-4">{testimonial.quote}</p>
+                <p className="text-gray-700 font-normal mb-4">{testimonial.quote}</p>
                 <div className="text-sm flex gap-2">
-                  <p className="font-semibold">{testimonial.author}</p>
+                  <p className="font-normal">{testimonial.author}</p>
                   <a
                     href={testimonial.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 transition-colors flex gap-2"
+                    className="font-light text-primary hover:text-primary/80 transition-colors flex gap-2"
                     aria-label={`Visit ${testimonial.author}'s website`}
                   >
                     {t("clients.visitSite")}

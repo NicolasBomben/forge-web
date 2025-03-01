@@ -41,7 +41,7 @@ export const NavBar = () => {
               <a
                 key={item}
                 href={`#${item}`}
-                className="text-gray-900 hover:text-white transition"
+                className="text-gray-900 font-poppins font-light hover:text-white transition"
               >
                 {t(`navBar.${item}`)}
               </a>

@@ -13,7 +13,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-8 mt-auto">
+    <footer className="bg-gray-900 text-white py-8 mt-auto font-poppins">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* Logo */}
@@ -22,7 +22,7 @@ export const Footer = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-6 font-light">
             <a
               href="https://linkedin.com"
               target="_blank"
@@ -46,10 +46,10 @@ export const Footer = () => {
           <div className="text-right block">
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-2 text-gray-300 hover:text-primary transition-colors"
+              className="inline-flex items-center gap-2 text-gray-300 font-light hover:text-primary transition-colors"
               aria-label="Scroll back to top"
             >
-              <span>Back to top</span>
+              <span className="font-light">Back to top</span>
               <ArrowUp className="w-4 h-4" />
             </button>
           </div>
@@ -57,7 +57,7 @@ export const Footer = () => {
 
         {/* Copyright Notice */}
         <div className="mt-8 text-center text-gray-400 text-sm">
-          <p>All rights reserved by BombenDev © {currentYear}</p>
+          <p className="font-light">All rights reserved by forgetech © {currentYear}</p>
         </div>
       </div>
     </footer>
