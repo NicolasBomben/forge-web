@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { ThemeToggle } from "./ThemeToggle";
 import { Menu } from "lucide-react";
 import { LanguageToggle } from "./LanguageToggle";
 import { NavMobile } from "./NavMobile";
@@ -41,12 +42,13 @@ export const NavBar = () => {
               <a
                 key={item}
                 href={`#${item}`}
-                className="text-gray-900 font-poppins font-light hover:text-white transition"
+                className="text-gray-900 dark:text-dark-foreground font-inter md:text-lg font-light hover:text-white transition dark:hover:text-dark-accent"
               >
                 {t(`navBar.${item}`)}
               </a>
             ))}
             <LanguageToggle />
+            <ThemeToggle />
           </nav>
         </div>
       </header>

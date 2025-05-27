@@ -53,9 +53,9 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50 font-poppins">
+    <section id="contact" className="py-24 bg-gray-50 dark:bg-dark-background font-inter">
       <div className="container mx-auto px-4 max-w-md md:max-w-lg lg:max-w-xl">
-        <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl tracking-tighter text-balance font-medium text-center mb-12 dark:text-dark-primary">
           {t("contact.title")}
         </h2>
         <div className="flex flex-col gap-8">
@@ -68,7 +68,7 @@ export const ContactSection = () => {
                 onChange={onInputChange}
                 placeholder={t("contact.namePlaceholder")}
                 required
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background px-3 py-2 text-base dark:placeholder-dark-accent"
               />
             </div>
             <div>
@@ -79,7 +79,7 @@ export const ContactSection = () => {
                 onChange={onInputChange}
                 placeholder={t("contact.emailPlaceholder")}
                 required
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background px-3 py-2 text-base dark:placeholder-dark-accent"
               />
             </div>
             <div>
@@ -88,9 +88,9 @@ export const ContactSection = () => {
                 value={service}
                 onChange={onInputChange}
                 required
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background  text-foreground dark:text-dark-accent px-3 py-2 text-base"
               >
-                <option value="" disabled>
+                <option value="">
                   {t("contact.selectService")}
                 </option>
                 {services.map((service) => (
@@ -107,12 +107,12 @@ export const ContactSection = () => {
                 onChange={onInputChange}
                 placeholder={t("contact.messagePlaceholder")}
                 required
-                className="flex min-h-[150px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex min-h-[150px] w-full rounded-md border border-input bg-background dark:bg-dark-background text-foreground dark:text-dark-accent px-3 py-2 text-sm"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-white font-light px-4 py-2 rounded-md transition-colors"
+              className="w-full bg-primary hover:bg-primary/90 text-white font-light px-4 py-2 rounded-md transition-colors "
             >
               {t("contact.submitButton")}
             </button>

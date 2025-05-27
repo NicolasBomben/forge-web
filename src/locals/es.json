@@ -8,11 +8,17 @@
   "mainTitleSub": "Con Desarrollo Web Profesional",
   "subTitle": "Transformamos ideas en soluciones de software potentes, eficientes y escalables.",
   "buttonMain": "Descubre Nuestros Servicios",
-  "ourMissionTitle": "Nuestra Misión",
-  "ourMissionSubTitle": "Potenciando a las empresas con soluciones digitales innovadoras",
-  "ourMissionText": "Impulsamos a pequeñas y medianas empresas a crecer en la era digital con soluciones innovadoras y eficientes. Entendemos los desafíos únicos que enfrentas y ofrecemos servicios estratégicos para potenciar tu presencia en línea.",
-  "ourMissionTextSecond": "Nuestra misión es clara: brindarte soluciones digitales de alto impacto que hagan escalar tu negocio. Desde sitios web personalizados y tiendas online optimizadas hasta estrategias SEO efectivas, estamos aquí para convertir tu visión en realidad y ayudarte a destacar en un mundo digital en constante evolución.",
-  "ourServicesButton": "Conversemos sobre tu proyecto.",
+  "weDoTitle" : "Lo que hacemos",
+  "weDoSubtitle" : "Creamos experiencias digitales que marcan la diferencia",
+  "weDoWebTitle" : "Presencia Web",
+  "weDoWebSubtitle": "Desarrollamos sitios web profesionales que establecen y fortalecen tu presencia digital.",
+  "weDoClientTitle":"Soluciones a medida",
+  "weDoClientSubtitle":"Cada solución está diseñada a medida para cumplir con los objetivos y metas específicas de tu negocio.",
+  "weDoApproachTitle":"Enfoque innovador",
+  "weDoApproachSubtitle":"Aportamos ideas creativas y tecnologías modernas para resolver tus desafíos digitales.",
+  "weDoText": "Creamos sitios web para emprendedores y startups en crecimiento que buscan potenciar su presencia en internet, ofreciendo soluciones innovadoras orientadas a cumplir el principal objetivo de cada cliente.",
+  "weDoCallToAction" : "¿Listo para transformar tu presencia digital?",
+  "weDoButton": "Agendá una consulta",
   "servicesTitle": "Nuestros Servicios",
   "servicesSubTitle": "Desarrollo web a la medida de tu negocio.",
 
@@ -45,7 +51,7 @@
 
   "pricing": {
     "pricingTitle": "Precios Simples y Transparentes",
-    "pricingSubtitle": "Elige el plan perfecto para tu negocio. Contáctanos para obtener una cotización personalizada según tus necesidades.",
+    "pricingSubtitle": "Decidis, según tus necesidades.",
     "pricingMostPopular": "Más Popular",
     "pricingButton": "Solicitá tu presupuesto",
     "basic": {

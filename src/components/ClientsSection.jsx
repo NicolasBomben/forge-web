@@ -11,34 +11,34 @@ export const ClientsSection = () => {
   const testimonials = useMemo(() => t("clients.testimonials", { returnObjects: true }), [t]);
 
   return (
-    <section id="clients" className="py-24 relative">
+    <section id="clients" className="py-24 relative dark:bg-dark-background">
       
       {/* circles background */}
       <div
-        className="absolute inset-0 opacity-10 dark:opacity-20"
+        className="absolute inset-2 opacity-25 animate-waveDots dark:animate-waveDotsDark"
         style={{
-          backgroundImage: `radial-gradient(#60A5FA 2px, transparent 2px)`,
-          backgroundSize: "30px 30px",
+          backgroundImage: `radial-gradient(var(--dot-color) 4px, transparent 4px)`,
+          backgroundSize: "60px 60px",
         }}
       ></div>
 
-      <div className="container mx-auto px-4 relative z-10 font-poppins">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">
+      <div className="container mx-auto px-4 relative z-10 font-inter">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl tracking-tighter text-balance font-medium text-center mb-12 dark:text-dark-primary">
           {t("clients.title")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 border-none"
+              className="bg-white dark:bg-dark-background rounded-lg shadow-lg p-6 border-none"
             >
               <div className="mb-4">
                 <div className="text-primary text-4xl">&quot;</div>
               </div>
               <div>
-                <p className="text-gray-700 font-normal mb-4">{testimonial.quote}</p>
+                <p className="text-gray-700 dark:text-dark-foreground font-normal md:text-lg mb-4">{testimonial.quote}</p>
                 <div className="text-sm flex gap-2">
-                  <p className="font-normal">{testimonial.author}</p>
+                  <p className="font-medium dark:text-dark-accent">{testimonial.author}</p>
                   <a
                     href={testimonial.website}
                     target="_blank"
