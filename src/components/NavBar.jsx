@@ -5,6 +5,7 @@ import { Menu } from "lucide-react";
 import { LanguageToggle } from "./LanguageToggle";
 import { NavMobile } from "./NavMobile";
 import Logo from "/assets/logo-forge.svg";
+import LogoDark from "/assets/logo-footer.svg";
 
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +34,8 @@ export const NavBar = () => {
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo centrado */}
           <div className="flex justify-center py-1">
-            <img src={Logo} alt="logo forgeTech" className="h-16 w-auto" />
+            <img src={Logo} alt="logo forgeTech" className="h-16 w-auto dark:hidden" />
+            <img src={LogoDark} alt="logo forgeTech" className="h-16 w-auto hidden dark:block" />
           </div>
 
           {/* Barra de navegación a la derecha */}
