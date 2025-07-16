@@ -1,3 +1,4 @@
+import AnimatedContent from "../Animations/AnimatedContent/AnimatedContent";
 import { useTranslation } from "react-i18next";
 import {
   FileText,
@@ -43,29 +44,31 @@ export const ServiceSection = () => {
             {t("servicesSubTitle")}
           </h3>
         </div>
-        {/* Render cards. */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map(({ key, icon: Icon }, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-dark-background rounded-lg shadow-lg hover:shadow-xl transition-shadow p-6 hover:border-secondary border-2 border-transparent dark:border-dark-primary dark:border"
-            >
-              <div className="mb-4">
-                <div className="w-12 h-12 bg-primary/10 roundel-lg flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-primary" />
+        <AnimatedContent>
+          {/* Render cards. */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map(({ key, icon: Icon }, index) => (
+              <div
+                key={index}
+                className="bg-white dark:bg-dark-background rounded-lg shadow-lg hover:shadow-xl transition-shadow p-6 hover:border-secondary border-2 border-transparent dark:border-dark-primary dark:border"
+              >
+                <div className="mb-4">
+                  <div className="w-12 h-12 bg-primary/10 roundel-lg flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-medium mb-2 dark:text-dark-accent">
+                    {t(`services.${key}.title`)}
+                  </h3>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-medium mb-2 dark:text-dark-accent">
-                  {t(`services.${key}.title`)}
-                </h3>
+                <div>
+                  <p className="font-mediu md:text-lg text-gray-600 dark:text-dark-foreground">
+                    {t(`services.${key}.description`)}
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="font-mediu md:text-lg text-gray-600 dark:text-dark-foreground">
-                  {t(`services.${key}.description`)}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </AnimatedContent>
       </div>
     </section>
   );
