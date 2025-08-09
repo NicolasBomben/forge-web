@@ -8,10 +8,11 @@ import Logo from "/assets/logo-forge.svg";
 import LogoDark from "/assets/logo-footer.svg";
 
 export const NavBar = () => {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const { t } = useTranslation();
-  const navItems = ["services", "pricing", "about", "contact"];
+  const navItems = ["plans", "projects", "process", "contact"];
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -44,7 +45,7 @@ export const NavBar = () => {
               <a
                 key={item}
                 href={`#${item}`}
-                className="text-gray-900 dark:text-dark-foreground font-inter md:text-lg font-light hover:text-white transition dark:hover:text-dark-accent"
+                className="text-gray-900 dark:text-dark-primary font-inter md:text-lg font-light hover:text-primary transition dark:hover:text-dark-accent"
               >
                 {t(`navBar.${item}`)}
               </a>
@@ -56,11 +57,12 @@ export const NavBar = () => {
       </header>
 
       <div className="md:hidden fixed top-1 left-2 z-[60]">
-        <img src={Logo} alt="" className="h-16 w-auto" />
+        <img src={Logo} alt="logo forgeTech" className="h-16 w-auto dark:hidden" />
+        <img src={LogoDark} alt="logo forgeTech" className="h-16 w-auto hidden dark:block" />
       </div>
       {/* Botón para abrir menú en móvil */}
       <button
-        className="md:hidden fixed top-4 right-4 z-[60] text-primary bg-white p-2 rounded-md shadow-md"
+        className="md:hidden fixed top-4 right-4 z-[60] text-white bg-primary p-2 rounded-md shadow-md"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <Menu className="h-6 w-6" />

@@ -1,130 +1,95 @@
 {
   "navBar": {
-    "services": "Services",
-    "pricing": "Pricing",
-    "about": "About",
+    "plans": "Plans",
+    "projects": "Projects",
+    "process": "Process",
     "contact": "Contact"
   },
-  "mainTitle": "Boost Your Business",
-  "mainTitleSub": "With Professional Web Development",
-  "subTitle": "We transform ideas into powerful, efficient, and scalable software solutions.",
-  "buttonMain": "Discover Our Services",
-  "weDoTitle" : "What We Do",
-  "weDoSubtitle" : "Creating digital experiences that make an impact",
-  "weDoWebTitle" : "Web Presence",
-  "weDoWebSubtitle": "We develop professional websites that establish and strengthen your digital presence in the online landscape.",
-  "weDoClientTitle":"Client-Focused",
-  "weDoClientSubtitle":"Every solution is tailored to meet your specific business objectives and goals.",
-  "weDoApproachTitle":"Fresh Approach",
-  "weDoApproachSubtitle":"We bring innovative ideas and modern technologies to solve your digital challenges.",
-  "weDoText": "We make websites for entrepreneurs or growing startups that want to enhance their presence on the internet, offering fresh solutions aimed at meeting the main objective of our client.",
-  "weDoCallToAction" : "Ready to transform your digital presence?",
-  "weDoButton": "Schedule a Consultation",
-  "servicesTitle": "Our Services",
-  "servicesSubTitle": "Web development designed for your business success.",
+  "heroSection": {
+    "heroLine1": "Your digital presence should bring you clients.",
+    "heroLine2": "We make it happen.",
+    "heroSubtitle": "We design Landing Pages and Websites 100% focused on results. The ideal tool for businesses, SMEs, and professionals looking for real growth on the internet.",
+    "contactButton": "Request a free consultation"
+  },
+  "weDoTitle": "What We Do",
+  "weDoSubtitle": "We create digital experiences that make a difference",
+  "weDoWebTitle": "Web Presence",
+  "weDoWebSubtitle": "We develop professional websites that establish and strengthen your digital presence.",
+  "weDoClientTitle": "Custom Solutions",
+  "weDoClientSubtitle": "Each solution is custom-designed to meet the specific goals and objectives of your business.",
+  "weDoApproachTitle": "Innovative Approach",
+  "weDoApproachSubtitle": "We bring creative ideas and modern technologies to solve your digital challenges.",
+  "weDoText": "We create websites for entrepreneurs and growing startups looking to boost their online presence, offering innovative solutions aimed at meeting each client's main objective.",
+  "weDoCallToAction": "Ready to transform your digital presence?",
+  "weDoButton": "Schedule a consultation",
+  "servicesTitle": "The Perfect Plan to Reach Your Goal",
+  "servicesSubTitle": "Two clear paths to success.\nAre you looking for quick results or to build a solid brand?",
+
   "services": {
     "landingPages": {
-      "title": "Landing Pages",
-      "description": "High-converting landing pages designed to capture leads through forms or schedule meetings."
+      "title": "Launch Plan",
+      "description": "The ideal solution to start attracting clients from day one. We deliver a high-conversion Landing Page, optimized for your advertising campaigns, with technical maintenance included for 3 months."
     },
     "sitiosWeb": {
-      "title": "Professional Websites",
-      "description": "Professional websites ideal for factories and businesses looking to establish their online presence."
-    },
-    "ecommerce": {
-      "title": "E-commerce",
-      "description": "Complete and functional online stores with secure payment processing and inventory management."
-    },
-    "uxUi": {
-      "title": "Web Design & UX/UI",
-      "description": "Professional desing and user experience optimization to ensure your website stands out."
-    },
-    "seo": {
-      "title": "SEO",
-      "description": "Search engine optimization and technical support to keep your website running smoothly."
-    },
-    "mantenimiento": {
-      "title": "Maintenance",
-      "description": "Continuous updates, security patches, and technical support to keep your website trouble-free."
+      "title": "Authority Plan",
+      "description": "Build a solid brand that generates trust and positions you as an expert. We create a complete Institutional Website that showcases your experience and services, with initial SEO optimization so your clients can find you on Google."
     }
   },
 
   "pricing": {
-    "pricingTitle": "Simple, Transparent Pricing",
-    "pricingSubtitle": "You decide, according to your need",
-    "pricingMostPopular": "Most Popular",
-    "pricingContact": "Contact us for pricing",
-    "pricingButton": "Get Custom Quote",
+    "pricingTitle": "From Idea to Launch in 3 Clear Steps",
+    "pricingSubtitle": "A simple, transparent, and you-focused process.",
     "basic": {
-      "name": "Basic",
-      "description": "Perfect for small businesses and startups",
-      "features": [
-        "Custom Website Development",
-        "Responsive Design",
-        "Basic SEO Optimization",
-        "3 Rounds of Revisions",
-        "1 Month Support Included"
-      ]
+      "name": "Diagnosis and Strategy",
+      "description": "We don't start designing without a plan. The first phase is an in-depth conversation to understand your goals, your ideal client, and your challenges. We come out of this with a clear strategy and an action plan for your project."
     },
     "professional": {
-      "name": "Professional",
-      "description": "Ideal for growing businesses",
-      "features": [
-        "Everything in Basic",
-        "E-commerce Integration",
-        "Advanced SEO Package",
-        "Performance Optimization",
-        "3 Months of Support Included"
-      ]
+      "name": "Design and Construction",
+      "description": "This is where the strategy becomes a reality. Our team designs an engaging user experience and builds your website with cutting-edge technology, keeping you updated on the progress so you can see your vision take shape."
     },
     "enterprise": {
-      "name": "Enterprise",
-      "description": "For large-scale projects",
-      "features": [
-        "Everything in Professional",
-        "Custom Features Development",
-        "API Integration",
-        "Database Design",
-        "12 Months of Support Included"
-      ]
+      "name": "Launch and Support",
+      "description": "We don't just hand over the files and disappear. We officially launch your website, ensure everything works perfectly, and provide you with simple training so you understand it. From here, our support begins."
     }
   },
 
   "clients": {
-    "title": "What Our Clients Say",
+    "title": "Projects that Generate Results",
     "testimonials": [
       {
-        "quote": "Thanks to the work done, we successfully established our presence in the digital world, connecting with more clients and effectively expanding our online reach.",
+        "quote": "Thanks to the work done, we successfully established our presence in the digital world, connecting with more clients and expanding our online reach.",
         "author": "Dataholics",
-        "website": "https://dataholics.site"
+        "website": "https://dataholics.site",
+        "image": "/assets/dataholics-site.png",
+        "imageWbp": "/assets/dataholics-site.webp",
+        "plan": "Launch Plan: Lead Capture Landing Page"
       },
       {
-        "quote": "I wanted something simple yet professional to showcase my business and the services I offer. The result exceeded my expectations and provided a solid foundation for growth.",
+        "quote": "I wanted something simple yet professional to showcase my business and the services I offer. The result exceeded my expectations and gave me a solid foundation to grow.",
         "author": "Boschetti Bordoni",
-        "website": "https://boschettibordoni.com.ar"
+        "website": "https://boschettibordoni.com.ar",
+        "image": "/assets/boschetti-bordoni-site.png",
+        "imageWbp": "/assets/boschetti-bordoni-site.webp",
+        "plan": "Authority Plan: Institutional Website"
       },
       {
-        "quote": "We wanted to give our website a fresh look: more minimalist, clean, and modern. Not only did we achieve that goal, but we also gained a powerful tool for clients to leave their contact information. It has been incredibly useful for us.",
-        "author": "Telmec",
-        "website": "https://telmec.com.ar"
+        "quote": "We wanted to give our website a new look: more minimalist, clean, and modern. Not only did we achieve that goal, but we also got a powerful tool for customers to leave their contact information. It has been incredibly useful for us.",
+        "author": "FanPro",
+        "website": "https://fanpro.com.ar/",
+        "image": "/assets/fanpro-site.png",
+        "imageWbp": "/assets/fanpro-site.webp",
+        "plan": "Launch Plan: Dual Channel Landing Page"
       }
     ],
-    "visitSite": "Visit Website"
+    "visitSite": "Visit the site"
   },
-
   "contact": {
-    "title": "Contact Us",
+    "title": "Ready to Get Started? Let's Talk.",
+    "subtitle": "Complete the following form and our team will contact you in less than 24 hours to schedule your free, no-obligation consultation.",
     "namePlaceholder": "Your Name",
-    "emailPlaceholder": "Your Email",
-    "selectService": "Select a service",
-    "services": {
-      "landingPage": "Landing Page",
-      "institutionalWebsite": "Institutional Website",
-      "ecommerce": "E-commerce",
-      "customWebsite": "Custom Website"
-    },
-    "messagePlaceholder": "Your Message",
-    "submitButton": "Send Message",
-    "alertMessage": "Message sent! We'll get back to you as soon as possible."
+    "emailPlaceholder": "Your Email Address",
+    "messagePlaceholder": "Hello, I am interested in your services. My project is about... and my main goal is...",
+    "submitButton": "Request my Free Consultation",
+    "alertMessage": "Message sent! We will get in touch with you as soon as possible."
   }
 }

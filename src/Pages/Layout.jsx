@@ -1,9 +1,8 @@
 import { NavBar } from "../components/NavBar";
 import { HeroSection } from "../components/HeroSection";
-import { ServiceSection } from "../components/ServiceSection";
-import { PricingPlans } from "../components/PricingPlans";
-import { ClientsSection } from "../components/ClientsSection";
-import { AboutSection } from "../components/AboutSection";
+import { PlansSection } from "../components/PlansSection";
+import { ProcessSection } from "../components/ProcessSection";
+import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 
@@ -13,10 +12,9 @@ export const Layout = () => {
       <NavBar />
       <main className="flex-1">
         <HeroSection />
-        <AboutSection />
-        <ServiceSection />
-        <PricingPlans />
-        <ClientsSection />
+        <PlansSection />
+        <ProcessSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
       <Footer />

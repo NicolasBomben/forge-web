@@ -13,7 +13,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-8 mt-auto font-poppins">
+    <footer className="bg-dark-background text-white py-8 mt-auto font-poppins relative">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* Logo */}

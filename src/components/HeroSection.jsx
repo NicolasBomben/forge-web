@@ -1,76 +1,76 @@
-import { useSpring, animated } from "@react-spring/web";
+import Particles from "../Animations/Backgrounds/Particles/Particles";
+import SplitText from "../Animations/TextAnimations/SplitText/SplitText";
 import { useTranslation } from "react-i18next";
-import { Rocket } from "lucide-react";
 
 export const HeroSection = () => {
   const { t } = useTranslation();
 
-  {
-    /* H1 animation */
-  }
-  const h1Animation = useSpring({
-    from: { opacity: 0, transform: "translateY(-20px)" },
-    to: { opacity: 1, transform: "translateY(0px)" },
-    config: { mass: 1, tension: 200, friction: 20 },
-  });
+  const heroLine = t("heroSection.heroLine1");
 
-  {
-    /* Span animation */
-  }
-  const spanAnimation = useSpring({
-    from: { opacity: 0, transform: "translateY(-10px)" },
-    to: { opacity: 1, transform: "translateY(0px)" },
-    delay: 300,
-    config: { mass: 1, tension: 200, friction: 20 },
-  });
-  {
-    /* P animation */
-  }
-  const pAnimation = useSpring({
-    from: { opacity: 0, transform: "translateY(10px)" },
-    to: { opacity: 1, transform: "translateY(0px)" },
-    delay: 600,
-    config: { mass: 1, tension: 200, friction: 20 },
-  });
+  const heroLine2 = t("heroSection.heroLine2");
 
-  const buttonAnimation = useSpring({
-    from: { opacity: 0, transform: "translateX(-1000px)" },
-    to: { opacity: 1, transform: "translateX(0px)" },
-    delay: 700,
-    config: { mass: 1, tension: 200, friction: 20 },
-  });
+  // Scroll suave al formulario de contacto
+  const handleContactScroll = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <section className="min-h-screen flex items-center w-full py-12 md:py-24 lg:py-32 px-4 md:px-6  dark:bg-dark-background">
-      <div className="container mx-auto relative z-10 pt-16">
-        <div className="flex flex-col items-center space-y-4 text-center">
-          <animated.h1
-            style={h1Animation}
-            className="font-inter font-semibold text-4xl tracking-tighter text-balance sm:text-5xl md:text-6xl lg:text-8xl text-gray-900 dark:text-dark-accent"
-          >
-            {t("mainTitle")}
-            <animated.span style={spanAnimation} className="block text-primary">
-              {t("mainTitleSub")}
-            </animated.span>
-          </animated.h1>
-
-          <animated.p
-            style={pAnimation}
-            className="mt-6 max-w-[600px] font-inter font-medium text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-white"
-          >
-            {t("subTitle")}
-          </animated.p>
-
-          <animated.button style={buttonAnimation} className="mt-10">
-            <a
-              href="#services"
-              className="inline-flex items-center justify-center gap-2 h-11 rounded-md px-8 bg-primary hover:bg-primary/90 text-white dark:text-dark-foreground dark:font-normal font-inter font-light  hover:scale-105 transition-all duration-300"
-            >
-              {t("buttonMain")}
-              <Rocket className="w-4 h-4 ml-2" />
-            </a>
-          </animated.button>
-        </div>
+    <section className="relative min-h-screen flex pt-10 md:pt-40 w-full px-4 bg-gray-50 dark:bg-dark-background overflow-hidden">
+      {/* Particles como background absoluto, solo en Hero */}
+      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+        <Particles
+          particleColors={["#673AB7", "#673AB7"]}
+          particleCount={300}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={true}
+          disableRotation={false}
+        />
+      </div>
+      <div className="container mx-auto pt-20 relative z-10">
+        <h1 className="md:w-[94%] xl:w-11/12 font-inter font-bold tracking-normal text-black dark:text-dark-primary text-4xl sm:text-5xl md:text-7xl">
+          <SplitText
+            key={heroLine}
+            text={heroLine}
+            className="font-inter font-bold tracking-normal text-black dark:text-dark-primary"
+            delay={80}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            textAlign="left"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+          />
+          <br />
+          <SplitText
+            key={heroLine2}
+            text={heroLine2}
+            className="font-inter font-bold tracking-normal text-black dark:text-dark-primary"
+            delay={140}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            textAlign="left"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+          />
+        </h1>
+        <p className="font-inter font-normal mt-4 text-lg md:text-xl text-gray-700 dark:text-dark-primary max-w-2xl whitespace-pre-line">
+          {t("heroSection.heroSubtitle")}
+        </p>
+        <button onClick={handleContactScroll}>
+          <span className="font-inter text-base text-white tracking-tight mt-6 inline-block bg-accent px-6 py-3 rounded-lg dark:bg-dark-accent dark:text-dark-primary">
+            {t("heroSection.contactButton")}
+          </span>
+        </button>
       </div>
     </section>
   );

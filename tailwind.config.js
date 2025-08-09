@@ -10,7 +10,7 @@ export default {
       },
       colors: {
         primary: {
-          DEFAULT: "#8B5CF6",
+          DEFAULT: "#673AB7",
           foreground: "#FFFFFF",
         },
         secondary: {
@@ -18,18 +18,18 @@ export default {
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#FCD34D",
+          DEFAULT: "#FF5722",
           foreground: "#FFFFFF",
         },
         background: "#F5F5F5",
         foreground: "#333333",
 
         dark: {
-          background: "#060913",
-          foreground: "#FFFFFF",
-          primary: "#8B5CF6",
+          background: "#181818",
+          primary: "#F7F7F7",
+          accent: "#FF5722",
+          accent2: "#673AB7",
           secondary: "#0EA5E9",
-          accent: "#FCD34D",
         },
       },
 

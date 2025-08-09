@@ -5,24 +5,11 @@ import { useForm } from "../hooks/useForm";
 export const ContactSection = () => {
   const { t } = useTranslation();
 
-  const { name, email, message, service, onInputChange, onResetForm } = useForm(
-    {
-      name: "",
-      email: "",
-      message: "",
-      service: "",
-    }
-  );
-
-  const services = [
-    { value: "landing-page", label: t("contact.services.landingPage") },
-    {
-      value: "institutional-website",
-      label: t("contact.services.institutionalWebsite"),
-    },
-    { value: "ecommerce", label: t("contact.services.ecommerce") },
-    { value: "custom-website", label: t("contact.services.customWebsite") },
-  ];
+  const { name, email, message, onInputChange, onResetForm } = useForm({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +21,7 @@ export const ContactSection = () => {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, message, service }),
+        body: JSON.stringify({ name, email, message }),
       });
 
       const result = await response.json();
@@ -53,70 +40,60 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50 dark:bg-dark-background font-inter">
-      <div className="container mx-auto px-4 max-w-md md:max-w-lg lg:max-w-xl">
-        <h2 className="text-3xl sm:text-4xl md:text-6xl tracking-tighter text-balance font-medium text-center mb-12 dark:text-dark-primary">
-          {t("contact.title")}
-        </h2>
-        <div className="flex flex-col gap-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <input
-                type="text"
-                name="name"
-                value={name}
-                onChange={onInputChange}
-                placeholder={t("contact.namePlaceholder")}
-                required
-                className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background px-3 py-2 text-base dark:placeholder-dark-accent"
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={onInputChange}
-                placeholder={t("contact.emailPlaceholder")}
-                required
-                className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background px-3 py-2 text-base dark:placeholder-dark-accent"
-              />
-            </div>
-            <div>
-              <select
-                name="service"
-                value={service}
-                onChange={onInputChange}
-                required
-                className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background  text-foreground dark:text-dark-accent px-3 py-2 text-base"
+    <section id="contact" className="py-24 bg-gray-50 dark:bg-dark-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="font-inter text-primary text-3xl sm:text-4xl md:text-6xl tracking-tighter text-balance font-medium mb-12 dark:text-dark-accent2">
+            {t("contact.title")}
+          </h2>
+          <h3 className="font-inter font-light tracking-normal text-gray-600 dark:text-dark-primary mx-auto text-lg sm:text-xl md:text-4xl">
+            {t("contact.subtitle")}
+          </h3>
+        </div>
+        <div className=" mx-auto px-4 max-w-md md:max-w-lg lg:max-w-xl">
+          <div className="flex flex-col gap-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={onInputChange}
+                  placeholder={t("contact.namePlaceholder")}
+                  required
+                  className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background px-3 py-2 text-base dark:placeholder-dark-accent"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={onInputChange}
+                  placeholder={t("contact.emailPlaceholder")}
+                  required
+                  className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background px-3 py-2 text-base dark:placeholder-dark-accent"
+                />
+              </div>
+
+              <div>
+                <textarea
+                  name="message"
+                  value={message}
+                  onChange={onInputChange}
+                  placeholder={t("contact.messagePlaceholder")}
+                  required
+                  className="flex min-h-[150px] w-full rounded-md border border-input bg-background dark:bg-dark-background text-foreground dark:text-dark-accent px-3 py-2 text-sm"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-accent dark:bg-dark-accent text-white font-light px-4 py-4 rounded-md transition-colors "
               >
-                <option value="">
-                  {t("contact.selectService")}
-                </option>
-                {services.map((service) => (
-                  <option key={service.value} value={service.value}>
-                    {service.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <textarea
-                name="message"
-                value={message}
-                onChange={onInputChange}
-                placeholder={t("contact.messagePlaceholder")}
-                required
-                className="flex min-h-[150px] w-full rounded-md border border-input bg-background dark:bg-dark-background text-foreground dark:text-dark-accent px-3 py-2 text-sm"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-white font-light px-4 py-2 rounded-md transition-colors "
-            >
-              {t("contact.submitButton")}
-            </button>
-          </form>
+                {t("contact.submitButton")}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

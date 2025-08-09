@@ -1,129 +1,96 @@
-{ "navBar": {
-    "services": "Servicios",
-    "pricing": "Precios",
-    "about": "Nosotros",
+{
+  "navBar": {
+    "plans": "Planes",
+    "projects": "Proyectos",
+    "process": "Proceso",
     "contact": "Contacto"
   },
-  "mainTitle": "Transforma Tu Negocio",
-  "mainTitleSub": "Con Desarrollo Web Profesional",
-  "subTitle": "Transformamos ideas en soluciones de software potentes, eficientes y escalables.",
-  "buttonMain": "Descubre Nuestros Servicios",
-  "weDoTitle" : "Lo que hacemos",
-  "weDoSubtitle" : "Creamos experiencias digitales que marcan la diferencia",
-  "weDoWebTitle" : "Presencia Web",
+  "heroSection": {
+    "heroLine1": "Tu presencia digital debería traerte clientes.",
+    "heroLine2": "Nosotros hacemos que suceda.",
+    "heroSubtitle": "Diseñamos Landing Pages y Sitios Web enfocados 100% en resultados. La herramienta ideal para negocios, pymes y profesionales que buscan un crecimiento real en internet.",
+    "contactButton": "Solicitar asesoría gratuita"
+  },
+  "weDoTitle": "Lo que hacemos",
+  "weDoSubtitle": "Creamos experiencias digitales que marcan la diferencia",
+  "weDoWebTitle": "Presencia Web",
   "weDoWebSubtitle": "Desarrollamos sitios web profesionales que establecen y fortalecen tu presencia digital.",
-  "weDoClientTitle":"Soluciones a medida",
-  "weDoClientSubtitle":"Cada solución está diseñada a medida para cumplir con los objetivos y metas específicas de tu negocio.",
-  "weDoApproachTitle":"Enfoque innovador",
-  "weDoApproachSubtitle":"Aportamos ideas creativas y tecnologías modernas para resolver tus desafíos digitales.",
+  "weDoClientTitle": "Soluciones a medida",
+  "weDoClientSubtitle": "Cada solución está diseñada a medida para cumplir con los objetivos y metas específicas de tu negocio.",
+  "weDoApproachTitle": "Enfoque innovador",
+  "weDoApproachSubtitle": "Aportamos ideas creativas y tecnologías modernas para resolver tus desafíos digitales.",
   "weDoText": "Creamos sitios web para emprendedores y startups en crecimiento que buscan potenciar su presencia en internet, ofreciendo soluciones innovadoras orientadas a cumplir el principal objetivo de cada cliente.",
-  "weDoCallToAction" : "¿Listo para transformar tu presencia digital?",
+  "weDoCallToAction": "¿Listo para transformar tu presencia digital?",
   "weDoButton": "Agendá una consulta",
-  "servicesTitle": "Nuestros Servicios",
-  "servicesSubTitle": "Desarrollo web a la medida de tu negocio.",
+  "servicesTitle": "El Plan Perfecto Para Alcanzar tu Objetivo",
+  "servicesSubTitle": "Dos caminos claros hacia el éxito.\n¿Buscas resultados rápidos o construir una marca sólida?",
 
   "services": {
     "landingPages": {
-      "title": "Landing Pages",
-      "description": "Landing Pages de alto rendimiento diseñadas para captar clientes potenciales a través de formularios o agendar reuniones."
+      "title": "Plan Despegue",
+      "description": "La solución ideal para empezar a captar clientes desde el primer día. Te entregamos una Landing Page de alta conversión, optimizada para tus campañas de publicidad, con el mantenimiento técnico incluido por 3 meses."
     },
     "sitiosWeb": {
-      "title": "Sitios Web Profesionales",
-      "description": "Sitios web profesionales ideales para fábricas y negocios que buscan establecer su presencia online."
-    },
-    "ecommerce": {
-      "title": "E-commerce",
-      "description": "Tiendas online completas y funcionales con procesamiento de pagos seguro y gestión de inventario."
-    },
-    "uxUi": {
-      "title": "Diseño Web y UX/UI",
-      "description": "Diseño atractivo y experiencia de usuario optimizada para hacer destacar tu sitio web."
-    },
-    "seo": {
-      "title": "SEO",
-      "description": "Optimización para motores de búsqueda y soporte técnico para mantener tu sitio web funcionando sin problemas."
-    },
-    "mantenimiento": {
-      "title": "Mantenimiento",
-      "description": "Actualizaciones continuas, parches de seguridad y soporte técnico para mantener tu sitio web funcionando sin inconvenientes."
+      "title": "Plan Autoridad",
+      "description": "Construye una marca sólida que genere confianza y te posicione como experto. Creamos un Sitio Web Institucional completo que muestra tu experiencia y servicios, con una optimización SEO inicial para que tus clientes te encuentren en Google."
     }
   },
 
   "pricing": {
-    "pricingTitle": "Precios Simples y Transparentes",
-    "pricingSubtitle": "Decidis, según tus necesidades.",
-    "pricingMostPopular": "Más Popular",
-    "pricingButton": "Solicitá tu presupuesto",
+    "pricingTitle": "De la Idea al Lanzamiento en 3 Pasos Claros",
+    "pricingSubtitle": "Un proceso simple, transparente y enfocado en ti.",
     "basic": {
-      "name": "Básico",
-      "description": "Ideal para pequeñas empresas y startups",
-      "features": [
-        "Desarrollo Web Personalizado",
-        "Diseño Responsivo",
-        "Optimización SEO Básica",
-        "3 Rondas de Revisión",
-        "1 Mes de Soporte Incluido"
-      ]
+      "name": "Diagnóstico y Estrategia",
+      "description": "No empezamos a diseñar sin un plan. La primera fase es una charla profunda para entender tus objetivos, tu cliente ideal y tus desafíos. Salimos de aquí con una estrategia clara y un plan de acción para tu proyecto."
     },
     "professional": {
-      "name": "Profesional",
-      "description": "Ideal para negocios en crecimiento",
-      "features": [
-        "Todo lo del plan Básico",
-        "Integración de E-commerce",
-        "Paquete SEO Avanzado",
-        "Optimización de Rendimiento",
-        "3 Meses de Soporte Incluidos"
-      ]
+      "name": "Diseño y Construcción",
+      "description": "Aquí es donde la estrategia se convierte en realidad. Nuestro equipo diseña una experiencia de usuario atractiva y construye tu página web con tecnología de punta, manteniéndote al tanto de los avances para que veas cómo tu visión toma forma."
     },
     "enterprise": {
-      "name": "Empresarial",
-      "description": "Para proyectos a gran escala",
-      "features": [
-        "Todo lo del plan Profesional",
-        "Desarrollo de Funcionalidades Personalizadas",
-        "Integración de API",
-        "Diseño de Base de Datos",
-        "12 Meses de Soporte Incluidos"
-      ]
+      "name": "Lanzamiento y Soporte",
+      "description": "No te entregamos los archivos y desaparecemos. Realizamos el lanzamiento oficial de tu web, nos aseguramos de que todo funcione a la perfección y te damos una capacitación simple para que la entiendas. A partir de aquí, empieza nuestro soporte."
     }
   },
 
   "clients": {
-    "title": "Lo que dicen nuestros clientes",
+    "title": "Proyectos que Generan Resultados",
     "testimonials": [
       {
         "quote": "Gracias al trabajo realizado, logramos establecer con éxito nuestra presencia en el mundo digital, conectando con más clientes y expandiendo nuestro alcance en línea.",
         "author": "Dataholics",
-        "website": "https://dataholics.site"
+        "website": "https://dataholics.site",
+        "image": "/assets/dataholics-site.png",
+        "imageWbp": "/assets/dataholics-site.webp",
+        "plan": "Plan Despegue: Landing Page de Captación"
       },
       {
         "quote": "Quería algo simple pero profesional para mostrar mi negocio y los servicios que ofrezco. El resultado superó mis expectativas y me dio una base sólida para crecer.",
         "author": "Boschetti Bordoni",
-        "website": "https://boschettibordoni.com.ar"
+        "website": "https://boschettibordoni.com.ar",
+        "image": "/assets/boschetti-bordoni-site.png",
+        "imageWbp": "/assets/boschetti-bordoni-site.webp",
+        "plan" : "Plan Autoridad: Sitio Web Institucional"
       },
       {
         "quote": "Queríamos darle un nuevo aspecto a nuestro sitio web: más minimalista, limpio y moderno. No solo logramos ese objetivo, sino que también obtuvimos una herramienta poderosa para que los clientes dejen su información de contacto. Ha sido increíblemente útil para nosotros.",
-        "author": "Telmec",
-        "website": "https://telmec.com.ar"
+        "author": "FanPro",
+        "website": "https://fanpro.com.ar/",
+        "image": "/assets/fanpro-site.png",
+        "imageWbp": "/assets/fanpro-site.webp",
+        "plan": "Plan Despegue: Landing Page para Doble Canal"
       }
     ],
     "visitSite": "Visita la web"
   },
 
   "contact": {
-    "title": "Contactanos",
+    "title": "¿Listo para Empezar? Hablemos.",
+    "subtitle": "Completa el siguiente formulario y nuestro equipo se pondrá en contacto en menos de 24 horas para agendar tu asesoría gratuita. Sin compromiso.",
     "namePlaceholder": "Tu Nombre",
     "emailPlaceholder": "Tu Correo Electrónico",
-    "selectService": "Selecciona un servicio",
-    "services": {
-      "landingPage": "Landing Page",
-      "institutionalWebsite": "Sitio Web Institucional",
-      "ecommerce": "E-commerce",
-      "customWebsite": "Sitio Web a Medida"
-    },
-    "messagePlaceholder": "Tu Mensaje",
-    "submitButton": "Enviar Mensaje",
+    "messagePlaceholder": "Hola, estoy interesado en sus servicios. Mi proyecto se trata de... y mi principal objetivo es..",
+    "submitButton": "Solicitar mi Asesoría Gratuita",
     "alertMessage": "¡Mensaje enviado! Nos pondremos en contacto contigo lo antes posible."
   }
 }

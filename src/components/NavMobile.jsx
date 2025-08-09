@@ -1,11 +1,13 @@
 import { X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LanguageToggle } from "./LanguageToggle";
+import { ThemeToggle } from "./ThemeToggle";
 import LogoMobile from "/assets/logo-mobile.svg";
+import LogoDark from "/assets/logo-footer.svg";
 
 export const NavMobile = ({ isMenuOpen, setIsMenuOpen }) => {
   const { t } = useTranslation();
-  const navItems = ["services", "pricing", "about", "contact"];
+  const navItems = ["plans", "projects", "process", "contact"];
 
   return (
     <nav
@@ -31,11 +33,14 @@ export const NavMobile = ({ isMenuOpen, setIsMenuOpen }) => {
           </a>
         ))}
       </div>
-      <div className="flex justify-center py-4">
+      <div className="flex justify-center gap-4 py-4">
         <LanguageToggle />
+     
+        <ThemeToggle />
       </div>
-      <div>
-        <img src={LogoMobile} alt="mobile-logo-forgeTech" />
+      <div className="flex justify-center py-2">
+        <img src={LogoMobile} alt="mobile-logo-forgeTech" className="h-16 w-auto dark:hidden" />
+        <img src={LogoDark} alt="logo forgeTech" className="h-16 w-auto hidden dark:block" />
       </div>
     </nav>
   );
