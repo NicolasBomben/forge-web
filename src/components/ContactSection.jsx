@@ -12,6 +12,7 @@ export const ContactSection = () => {
   });
 
   const handleSubmit = async (e) => {
+         /* global fbq */
     e.preventDefault();
 
     try {
@@ -27,9 +28,17 @@ export const ContactSection = () => {
       const result = await response.json();
 
       if (result.code === 200) {
+        
         toast.success(t("contact.alertMessage"), {
           progressClassName: "bg-primary",
         });
+
+        
+        //Envía el evento "Lead" a Meta SOLO si el formulario fue exitoso.
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead');
+        }
+     
         onResetForm();
       } else {
         toast.error(result.message);
