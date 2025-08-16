@@ -29,6 +29,7 @@ export const ContactSection = () => {
 
       if (result.code === 200) {
         toast.success(t("contact.alertMessage"), {
+          position: "top-center",
           progressClassName: "bg-primary",
         });
 
