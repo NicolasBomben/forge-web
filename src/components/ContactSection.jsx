@@ -12,7 +12,7 @@ export const ContactSection = () => {
   });
 
   const handleSubmit = async (e) => {
-         /* global fbq */
+    /* global fbq */
     e.preventDefault();
 
     try {
@@ -28,17 +28,15 @@ export const ContactSection = () => {
       const result = await response.json();
 
       if (result.code === 200) {
-        
         toast.success(t("contact.alertMessage"), {
           progressClassName: "bg-primary",
         });
 
-        
         //Envía el evento "Lead" a Meta SOLO si el formulario fue exitoso.
-        if (typeof fbq === 'function') {
-          fbq('track', 'Lead');
+        if (typeof fbq === "function") {
+          fbq("track", "Lead");
         }
-     
+
         onResetForm();
       } else {
         toast.error(result.message);
@@ -70,7 +68,7 @@ export const ContactSection = () => {
                   onChange={onInputChange}
                   placeholder={t("contact.namePlaceholder")}
                   required
-                  className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background px-3 py-2 text-base dark:placeholder-dark-accent"
+                  className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background px-3 py-2 text-base text-foreground dark:text-dark-accent dark:placeholder-dark-accent"
                 />
               </div>
               <div>
@@ -81,7 +79,7 @@ export const ContactSection = () => {
                   onChange={onInputChange}
                   placeholder={t("contact.emailPlaceholder")}
                   required
-                  className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background px-3 py-2 text-base dark:placeholder-dark-accent"
+                  className="flex h-10 w-full rounded-md border border-input bg-background dark:bg-dark-background px-3 py-2 text-base text-foreground dark:text-dark-accent dark:placeholder-dark-accent"
                 />
               </div>
 
