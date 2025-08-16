@@ -1,4 +1,3 @@
-import MetaPixel from "../components/MetaPixel";
 import { NavBar } from "../components/NavBar";
 import { HeroSection } from "../components/HeroSection";
 import { PlansSection } from "../components/PlansSection";
@@ -9,8 +8,6 @@ import { Footer } from "../components/Footer";
 
 export const Layout = () => {
   return (
-    <>
-    <MetaPixel/>
     <div className="flex flex-col min-h-screen">
       <NavBar />
       <main className="flex-1">
@@ -22,6 +19,5 @@ export const Layout = () => {
       </main>
       <Footer />
     </div>
-    </>
   );
 };
