@@ -62,10 +62,10 @@ export const NavBar = () => {
       </div>
       {/* Botón para abrir menú en móvil */}
       <button
-        className="md:hidden fixed top-4 right-4 z-[60] text-white bg-primary p-2 rounded-md shadow-md"
+        className="md:hidden fixed top-4 right-4 z-[60] text-white bg-primary p-2 rounded-md shadow-md w-28 font-inter text-lg font-semibold"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        <Menu className="h-6 w-6" />
+        Menu 
       </button>
 
       {/* Menú móvil */}

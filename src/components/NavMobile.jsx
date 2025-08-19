@@ -16,9 +16,12 @@ export const NavMobile = ({ isMenuOpen, setIsMenuOpen }) => {
       }`}
       style={{ top: "0px" }}
     >
-      <div className="flex justify-end p-4">
-        <button onClick={() => setIsMenuOpen(false)}>
-          <X className="h-6 w-6 text-white" />
+      <div className="flex justify-end p-4 ">
+        <button
+          className="text-primary font-semibold bg-background font-inter text-lg p-2 rounded-md shadow-md"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          CLOSE MENU
         </button>
       </div>
       <div className="container mx-auto text-2xl px-4 flex flex-col space-y-4 p-8">
@@ -35,12 +38,20 @@ export const NavMobile = ({ isMenuOpen, setIsMenuOpen }) => {
       </div>
       <div className="flex justify-center gap-4 py-4">
         <LanguageToggle />
-     
+
         <ThemeToggle />
       </div>
       <div className="flex justify-center py-2">
-        <img src={LogoMobile} alt="mobile-logo-forgeTech" className="h-16 w-auto dark:hidden" />
-        <img src={LogoDark} alt="logo forgeTech" className="h-16 w-auto hidden dark:block" />
+        <img
+          src={LogoMobile}
+          alt="mobile-logo-forgeTech"
+          className="h-16 w-auto dark:hidden"
+        />
+        <img
+          src={LogoDark}
+          alt="logo forgeTech"
+          className="h-16 w-auto hidden dark:block"
+        />
       </div>
     </nav>
   );
