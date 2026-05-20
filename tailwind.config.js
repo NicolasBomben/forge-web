@@ -5,66 +5,45 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        inter:["InterVariable", "sans-serif"],
+        sans: ["InterVariable", "sans-serif"],
+        display: ["Poppins", "sans-serif"],
       },
       colors: {
-        primary: {
-          DEFAULT: "#673AB7",
-          foreground: "#FFFFFF",
-        },
-        secondary: {
-          DEFAULT: "#0EA5E9",
-          foreground: "#FFFFFF",
+        background: "#FAFAFA",
+        foreground: "#0A0A0A",
+        muted: {
+          DEFAULT: "#F5F5F5",
+          foreground: "#737373",
         },
         accent: {
-          DEFAULT: "#FF5722",
-          foreground: "#FFFFFF",
+          DEFAULT: "#0A0A0A",
+          foreground: "#FAFAFA",
         },
-        background: "#F5F5F5",
-        foreground: "#333333",
-
-        dark: {
-          background: "#181818",
-          primary: "#F7F7F7",
-          accent: "#FF5722",
-          accent2: "#673AB7",
-          secondary: "#0EA5E9",
-        },
+        border: "#E5E5E5",
       },
-
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+        "marquee-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
         },
-        fadeIn: {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        waveDots: {
-          "0%": { backgroundPosition: "0 0" },
-          "50%": { backgroundPosition: "30px 60px" },
-          "100%": { backgroundPosition: "0 0" },
-        },
-        waveClients: {
-          "0%": { backgroundPosition: "0 0" },
-          "50%": { backgroundPosition: "0 60px" }, // solo vertical
-          "100%": { backgroundPosition: "0 0" },
+        scaleIn: {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        fadeIn: "fadeIn 0.5s ease-out forwards",
-        waveDots: "waveDots 10s ease-in-out infinite",
-        waveDotsDark: "waveDots 6s ease-in-out infinite",
-        waveClient: 'waveHero 20s ease-in-out infinite',
-        waveClientDark: 'waveHero 15s ease-in-out infinite',
+        marquee: "marquee 30s linear infinite",
+        "marquee-reverse": "marquee-reverse 30s linear infinite",
+        fadeInUp: "fadeInUp 0.8s ease-out forwards",
+        scaleIn: "scaleIn 0.6s ease-out forwards",
       },
     },
   },

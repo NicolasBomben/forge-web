@@ -1,95 +1,124 @@
 {
   "navBar": {
-    "plans": "Planes",
-    "projects": "Proyectos",
-    "process": "Proceso",
+    "about": "Sobre Mi",
+    "cruce": "CRUCE",
+    "personal": "Proyectos",
     "contact": "Contacto"
   },
-  "heroSection": {
-    "heroLine1": "Tu presencia digital debería traerte clientes. \nNosotros hacemos que suceda.",
-    "heroSubtitle": "Diseñamos Landing Pages y Sitios Web enfocados 100% en resultados. La herramienta ideal para negocios, pymes y profesionales que buscan un crecimiento real en internet.",
-    "contactButton": "Solicitar asesoría gratuita"
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Nicolas Bomben",
+    "role": "Software Engineer",
+    "description": "Construyo experiencias digitales que conectan marcas con personas. Especializado en ecommerce con VTEX IO y soluciones web escalables.",
+    "cta": "Ver proyectos"
   },
-  "weDoTitle": "Lo que hacemos",
-  "weDoSubtitle": "Creamos experiencias digitales que marcan la diferencia",
-  "weDoWebTitle": "Presencia Web",
-  "weDoWebSubtitle": "Desarrollamos sitios web profesionales que establecen y fortalecen tu presencia digital.",
-  "weDoClientTitle": "Soluciones a medida",
-  "weDoClientSubtitle": "Cada solución está diseñada a medida para cumplir con los objetivos y metas específicas de tu negocio.",
-  "weDoApproachTitle": "Enfoque innovador",
-  "weDoApproachSubtitle": "Aportamos ideas creativas y tecnologías modernas para resolver tus desafíos digitales.",
-  "weDoText": "Creamos sitios web para emprendedores y startups en crecimiento que buscan potenciar su presencia en internet, ofreciendo soluciones innovadoras orientadas a cumplir el principal objetivo de cada cliente.",
-  "weDoCallToAction": "¿Listo para transformar tu presencia digital?",
-  "weDoButton": "Agendá una consulta",
-  "servicesTitle": "El Plan Perfecto Para Alcanzar tu Objetivo",
-  "servicesSubTitle": "Dos caminos claros hacia el éxito.\n¿Buscas resultados rápidos o construir una marca sólida?",
-
-  "services": {
-    "landingPages": {
-      "title": "Plan Despegue",
-      "description": "La solución ideal para empezar a captar clientes desde el primer día. Te entregamos una Landing Page de alta conversión, optimizada para tus campañas de publicidad, con el mantenimiento técnico incluido por 3 meses."
-    },
-    "sitiosWeb": {
-      "title": "Plan Autoridad",
-      "description": "Construye una marca sólida que genere confianza y te posicione como experto. Creamos un Sitio Web Institucional completo que muestra tu experiencia y servicios, con una optimización SEO inicial para que tus clientes te encuentren en Google."
-    }
+  "about": {
+    "title": "SOBRE MI",
+    "description": "Software Engineer con experiencia en desarrollo de soluciones ecommerce de alto rendimiento. Durante mi paso por CRUCE, una agencia especializada en VTEX IO, trabajé con marcas líderes en Argentina desarrollando tiendas online, componentes custom y dashboards de gestión.",
+    "description2": "Actualmente enfocado en proyectos personales, explorando el potencial de la inteligencia artificial aplicada a productos SaaS.",
+    "skills": ["React", "TypeScript", "VTEX IO", "Node.js", "AWS", "Next.js", "Tailwind CSS", "PostgreSQL"]
   },
-
-  "pricing": {
-    "pricingTitle": "De la Idea al Lanzamiento en 3 Pasos Claros",
-    "pricingSubtitle": "Un proceso simple, transparente y enfocado en ti.",
-    "basic": {
-      "name": "Diagnóstico y Estrategia",
-      "description": "No empezamos a diseñar sin un plan. La primera fase es una charla profunda para entender tus objetivos, tu cliente ideal y tus desafíos. Salimos de aquí con una estrategia clara y un plan de acción para tu proyecto."
-    },
-    "professional": {
-      "name": "Diseño y Construcción",
-      "description": "Aquí es donde la estrategia se convierte en realidad. Nuestro equipo diseña una experiencia de usuario atractiva y construye tu página web con tecnología de punta, manteniéndote al tanto de los avances para que veas cómo tu visión toma forma."
-    },
-    "enterprise": {
-      "name": "Lanzamiento y Soporte",
-      "description": "No te entregamos los archivos y desaparecemos. Realizamos el lanzamiento oficial de tu web, nos aseguramos de que todo funcione a la perfección y te damos una capacitación simple para que la entiendas. A partir de aquí, empieza nuestro soporte."
-    }
-  },
-
-  "clients": {
-    "title": "Proyectos que Generan Resultados",
-    "testimonials": [
+  "cruce": {
+    "title": "MI PASO POR CRUCE",
+    "subtitle": "Agencia especializada en ecommerce con VTEX IO",
+    "description": "Desarrollé soluciones para marcas líderes en retail, farmacia, moda y electrónica. Componentes custom, integraciones con APIs externas y dashboards de gestión.",
+    "projects": [
       {
-        "quote": "Gracias al trabajo realizado, logramos establecer con éxito nuestra presencia en el mundo digital, conectando con más clientes y expandiendo nuestro alcance en línea.",
-        "author": "Dataholics",
-        "website": "https://dataholics.site",
-        "image": "/assets/dataholics-site.png",
-        "imageWbp": "/assets/dataholics-site.webp",
-        "plan": "Plan Despegue: Landing Page de Captación"
+        "id": "farmaplus",
+        "name": "FarmaPlus",
+        "category": "Farmacia",
+        "description": "Soporte evolutivo del ecommerce. Desarrollo de componentes custom como la barra de progreso de envios y mejoras en la experiencia de compra.",
+        "technologies": ["VTEX IO", "React", "TypeScript"],
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-farmaplus-home-daba-soporte-evolutivo-UQdpIA7vwFrerppweYIcvdUZt2efE0.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-farmaplus-seccion-listados-u5oMmvCEE4m5Vk8pdCNyoBYBb6weLD.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-barra-de-envios-farmaplus-componente-desarrollado-RCX7iy5XU1o6NY7GWJXjUgcqtWLRVs.png"
+        ]
       },
       {
-        "quote": "Quería algo simple pero profesional para mostrar mi negocio y los servicios que ofrezco. El resultado superó mis expectativas y me dio una base sólida para crecer.",
-        "author": "Boschetti Bordoni",
-        "website": "https://boschettibordoni.com.ar",
-        "image": "/assets/boschetti-bordoni-site.png",
-        "imageWbp": "/assets/boschetti-bordoni-site.webp",
-        "plan" : "Plan Autoridad: Sitio Web Institucional"
+        "id": "taverniti",
+        "name": "Taverniti",
+        "category": "Moda",
+        "description": "Ecommerce de moda premium. Desarrollo del home, listados de productos y experiencia de usuario optimizada para conversion.",
+        "technologies": ["VTEX IO", "React", "GraphQL"],
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-taverniti-home-5HBnZziXdvfarhrWg9JziptrTKKxk0.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-taverniti-listados-N9utHjkE8PQB4YIIUbSYINBwXjU9Gt.png"
+        ]
       },
       {
-        "quote": "Queríamos darle un nuevo aspecto a nuestro sitio web: más minimalista, limpio y moderno. No solo logramos ese objetivo, sino que también obtuvimos una herramienta poderosa para que los clientes dejen su información de contacto. Ha sido increíblemente útil para nosotros.",
-        "author": "FanPro",
-        "website": "https://fanpro.com.ar/",
-        "image": "/assets/fanpro-site.png",
-        "imageWbp": "/assets/fanpro-site.webp",
-        "plan": "Plan Despegue: Landing Page para Doble Canal"
+        "id": "colorshop",
+        "name": "ColorShop",
+        "category": "Retail",
+        "description": "Tienda de pinturas y revestimientos. Desarrollo de cards de producto con selector de variantes y sistema de precios.",
+        "technologies": ["VTEX IO", "React", "CSS"],
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-card-colorshop-componente-desarrollado-qyO1t628LF3tVMAwYiRQTUp62jpn1h.png"
+        ]
+      },
+      {
+        "id": "yuhmak",
+        "name": "Yuhmak",
+        "category": "Electronica",
+        "description": "Ecommerce de electrodomesticos y tecnologia. Soporte evolutivo con desarrollo de nuevas funcionalidades y optimizaciones.",
+        "technologies": ["VTEX IO", "React", "Node.js"],
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-yuhmak-home-soporte-evolutivo-BR2nDbxwztWhZloTdRsKrtvSqPSO1Y.png"
+        ]
+      },
+      {
+        "id": "saludglobal",
+        "name": "SaludGlobal",
+        "category": "Salud",
+        "description": "Dashboard de gestion de ordenes de compra. Integracion con servicios AWS para centralizar datos provenientes de VTEX.",
+        "technologies": ["React", "AWS", "Node.js", "PostgreSQL"],
+        "images": []
       }
-    ],
-    "visitSite": "Visita la web"
+    ]
   },
-
+  "personal": {
+    "title": "PROYECTOS PERSONALES",
+    "subtitle": "Explorando nuevas tecnologias y productos",
+    "projects": [
+      {
+        "id": "chatbot-saas",
+        "name": "ChatBot SaaS",
+        "category": "SaaS / IA",
+        "description": "Plataforma de chatbots inteligentes que permite a empresas automatizar sus conversaciones con clientes. Incluye dashboard de administracion, captura de leads, entrenamiento con documentos y sitios web, y widget embebible.",
+        "technologies": ["Next.js", "TypeScript", "OpenAI", "PostgreSQL", "Tailwind CSS"],
+        "status": "En desarrollo",
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-dashboard-chatboot-login-5uwveuNfjHr9FHOKP5ca99dZrLKaEK.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-dashboard-chatboot-uno-16VONoqB5sUVBVGxI4892QDyWjfbfc.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-dashboard-chatboot-dos-C5CusND0FeoLBX8lKdxGg03YbTSEql.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-dashboard-chatboot-tres-Za10mdLUAaMMRjuAVOwk4Oz1zDdQ7A.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-dashboard-chatboot-cuatro-c2aybY29R7UzuST9MqnmUYhf6gvDhn.png"
+        ]
+      },
+      {
+        "id": "telmec",
+        "name": "Telmec",
+        "category": "Sitio Web",
+        "description": "Sitio web institucional para empresa de precision mecanica industrial. Desarrollo completo con enfoque en mostrar los productos y servicios de la empresa.",
+        "technologies": ["React", "Tailwind CSS", "Framer Motion"],
+        "status": "Completado",
+        "url": "https://telmec.com.ar",
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-telmec-proyecto-personal-DQ5wlf8ObND80OZJnibSqJBP7I97pv.png"
+        ]
+      }
+    ]
+  },
   "contact": {
-    "title": "¿Listo para Empezar? Hablemos.",
-    "subtitle": "Completa el siguiente formulario y nuestro equipo se pondrá en contacto en menos de 24 horas para agendar tu asesoría gratuita. Sin compromiso.",
-    "namePlaceholder": "Tu Nombre",
-    "emailPlaceholder": "Tu Correo Electrónico",
-    "messagePlaceholder": "Hola, estoy interesado en sus servicios. Mi proyecto se trata de... y mi principal objetivo es..",
-    "submitButton": "Solicitar mi Asesoría Gratuita",
-    "alertMessage": "¡Mensaje enviado! Nos pondremos en contacto contigo lo antes posible."
+    "title": "HABLEMOS",
+    "subtitle": "Estoy abierto a nuevas oportunidades y proyectos interesantes",
+    "email": "contacto@nicolasbomben.com",
+    "linkedin": "linkedin.com/in/nicolasbomben",
+    "github": "github.com/nicolasbomben",
+    "cta": "Enviar mensaje"
+  },
+  "footer": {
+    "copyright": "Nicolas Bomben",
+    "year": "2024"
   }
 }

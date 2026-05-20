@@ -2,11 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
 
-:root {
-  --dot-color: #60A5FA; /* light: azul claro */
+  ::selection {
+    @apply bg-foreground text-background;
+  }
 }
 
-.dark {
-  --dot-color: #FCD34D; /* dark: azul más oscuro o el que combine con dark bg */
+@layer components {
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-24;
+  }
+
+  .marquee-text {
+    @apply text-[8rem] md:text-[12rem] lg:text-[16rem] font-display font-bold leading-none tracking-tighter;
+    -webkit-text-stroke: 1px rgba(10, 10, 10, 0.15);
+    color: transparent;
+  }
+
+  .marquee-text-filled {
+    @apply text-[8rem] md:text-[12rem] lg:text-[16rem] font-display font-bold leading-none tracking-tighter text-foreground;
+  }
+
+  .project-card {
+    @apply relative overflow-hidden rounded-lg bg-muted transition-all duration-500;
+  }
+
+  .project-card:hover .project-image {
+    @apply scale-105;
+  }
+
+  .project-card:hover .project-overlay {
+    @apply opacity-100;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
