@@ -1,46 +1,83 @@
-import Particles from "../Animations/Backgrounds/Particles/Particles";
-import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import Marquee from "./Marquee";
 
 export const HeroSection = () => {
-  const { t } = useTranslation();
+  const techStack = [
+    "React",
+    "TypeScript",
+    "VTEX IO",
+    "Node.js",
+    "Next.js",
+    "AWS",
+    "GraphQL",
+    "NestJS",
+  ];
 
-  // Scroll suave al formulario de contacto
-  const handleContactScroll = (e) => {
+  const handleScroll = (e, href) => {
     e.preventDefault();
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section className="relative min-h-screen flex pt-10 md:pt-40 w-full px-4 bg-gray-50 dark:bg-dark-background overflow-hidden">
-      {/* Particles como background absoluto */}
-      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <Particles
-          particleColors={["#673AB7", "#673AB7"]}
-          particleCount={300}
-          particleSpread={5}
-          speed={0.1}
-          particleBaseSize={200}
-          moveParticlesOnHover={true}
-          alphaParticles={true}
-          disableRotation={false}
-        />
+    <section className="min-h-screen flex flex-col justify-between bg-[#0a0a0a] pt-20">
+      <div className="flex-1 flex flex-col justify-center max-w-[1400px] mx-auto px-6 md:px-12 py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h1 className="heading-display text-white">
+            FRONTEND
+            <br />
+            DEVELOPER.
+          </h1>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="mt-8 text-lg md:text-xl text-[#888888] max-w-2xl leading-relaxed"
+        >
+          Construyo interfaces que funcionan. Ecommerce, productos SaaS y sitios
+          institucionales.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          className="mt-10 flex flex-wrap gap-4"
+        >
+          <a
+            href="#proyectos"
+            onClick={(e) => handleScroll(e, "#proyectos")}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a0a0a] font-medium text-sm uppercase tracking-wider hover:bg-[#f5e642] transition-colors duration-300"
+          >
+            Ver proyectos
+            <span className="text-lg">&rarr;</span>
+          </a>
+          <a
+            href="#cruce"
+            onClick={(e) => handleScroll(e, "#cruce")}
+            className="inline-flex items-center gap-2 px-6 py-3 border border-[#222222] text-white font-medium text-sm uppercase tracking-wider hover:border-[#f5e642] hover:text-[#f5e642] transition-colors duration-300"
+          >
+            Mi paso por CRUCE
+            <span className="text-lg">&rarr;</span>
+          </a>
+        </motion.div>
       </div>
-      <div className="container mx-auto pt-20 relative z-10">
-        <h1 className="font-inter font-bold tracking-normal text-black dark:text-dark-primary text-4xl sm:text-5xl md:text-7xl whitespace-pre-line">
-          {t("heroSection.heroLine1")}
-        </h1>
-        <p className="font-inter font-normal mt-4 text-lg md:text-xl text-gray-700 dark:text-dark-primary max-w-2xl whitespace-pre-line">
-          {t("heroSection.heroSubtitle")}
-        </p>
-        <button onClick={handleContactScroll}>
-          <span className="font-inter text-base text-white tracking-tight mt-6 inline-block bg-accent px-6 py-3 rounded-lg dark:bg-dark-accent dark:text-dark-primary">
-            {t("heroSection.contactButton")}
-          </span>
-        </button>
-      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      >
+        <Marquee items={techStack} />
+      </motion.div>
     </section>
   );
 };

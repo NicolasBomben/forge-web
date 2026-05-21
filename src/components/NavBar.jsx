@@ -1,75 +1,114 @@
 import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { ThemeToggle } from "./ThemeToggle";
-import { Menu } from "lucide-react";
-import { LanguageToggle } from "./LanguageToggle";
-import { NavMobile } from "./NavMobile";
-import Logo from "/assets/logo-forge.svg";
-import LogoDark from "/assets/logo-footer.svg";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const { t } = useTranslation();
-  const navItems = ["plans", "projects", "process", "contact"];
+  const navItems = [
+    { label: "Sobre mí", href: "#sobre-mi" },
+    { label: "Proyectos", href: "#proyectos" },
+    { label: "CRUCE", href: "#cruce" },
+    { label: "Contacto", href: "#contacto" },
+  ];
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
     const handleScroll = () => {
-      setIsVisible(window.scrollY < lastScrollY || window.scrollY < 50);
-      lastScrollY = window.scrollY;
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out delay-200 hidden md:block ${
-          isVisible ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-[#0a0a0a]/80 backdrop-blur-md border-b border-[#222222]"
+            : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-4 flex items-center justify-between">
-          {/* Logo centrado */}
-          <div className="flex justify-center py-1">
-            <img src={Logo} alt="logo forgeTech" className="h-16 w-auto dark:hidden" />
-            <img src={LogoDark} alt="logo forgeTech" className="h-16 w-auto hidden dark:block" />
-          </div>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            {/* Logo */}
+            <a href="#" className="text-2xl font-bold text-white tracking-tight">
+              FN.
+            </a>
 
-          {/* Barra de navegación a la derecha */}
-          <nav className="flex space-x-6 items-center py-1">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item}`}
-                className="text-gray-900 dark:text-dark-primary font-inter md:text-lg font-light hover:text-primary transition dark:hover:text-dark-accent"
-              >
-                {t(`navBar.${item}`)}
-              </a>
-            ))}
-            <LanguageToggle />
-            <ThemeToggle />
-          </nav>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-8">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-sm text-[#888888] hover:text-white transition-colors duration-200 uppercase tracking-wider"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden flex flex-col gap-1.5 p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <motion.span
+                animate={isMobileMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+                className="w-6 h-0.5 bg-white block"
+              />
+              <motion.span
+                animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                className="w-6 h-0.5 bg-white block"
+              />
+              <motion.span
+                animate={isMobileMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+                className="w-6 h-0.5 bg-white block"
+              />
+            </button>
+          </div>
         </div>
       </header>
 
-      <div className="md:hidden fixed top-1 left-2 z-[60]">
-        <img src={Logo} alt="logo forgeTech" className="h-16 w-auto dark:hidden" />
-        <img src={LogoDark} alt="logo forgeTech" className="h-16 w-auto hidden dark:block" />
-      </div>
-      {/* Botón para abrir menú en móvil */}
-      <button
-        className="md:hidden fixed top-4 right-4 z-[60] text-white bg-primary p-2 rounded-md shadow-md w-28 font-inter text-lg font-semibold"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        Menu 
-      </button>
-
-      {/* Menú móvil */}
-      <NavMobile isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-40 bg-[#0a0a0a] md:hidden"
+          >
+            <nav className="flex flex-col items-center justify-center h-full gap-8">
+              {navItems.map((item, index) => (
+                <motion.a
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-3xl font-bold text-white uppercase tracking-wider hover:text-[#f5e642] transition-colors"
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

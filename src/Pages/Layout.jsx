@@ -1,20 +1,20 @@
 import { NavBar } from "../components/NavBar";
 import { HeroSection } from "../components/HeroSection";
-import { PlansSection } from "../components/PlansSection";
-import { ProcessSection } from "../components/ProcessSection";
+import { AboutSection } from "../components/AboutSection";
 import { ProjectsSection } from "../components/ProjectsSection";
+import { CruceSection } from "../components/CruceSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 
 export const Layout = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <NavBar />
       <main className="flex-1">
         <HeroSection />
-        <PlansSection />
-        <ProcessSection />
+        <AboutSection />
         <ProjectsSection />
+        <CruceSection />
         <ContactSection />
       </main>
       <Footer />

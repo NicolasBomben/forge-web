@@ -2,11 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-
-:root {
-  --dot-color: #60A5FA; /* light: azul claro */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0a0a0a;
+  }
+  
+  body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01", "ss02", "cv01";
+  }
+  
+  ::selection {
+    background-color: #f5e642;
+    color: #0a0a0a;
+  }
 }
 
-.dark {
-  --dot-color: #FCD34D; /* dark: azul más oscuro o el que combine con dark bg */
+@layer components {
+  .section-label {
+    @apply text-xs uppercase tracking-[0.3em] font-medium;
+    color: #888888;
+  }
+  
+  .heading-display {
+    font-size: clamp(3rem, 10vw, 8rem);
+    @apply font-bold uppercase leading-[0.9] tracking-tight;
+  }
+  
+  .heading-large {
+    font-size: clamp(2rem, 6vw, 4rem);
+    @apply font-bold leading-[1.1] tracking-tight;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Marquee animation */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
 }
