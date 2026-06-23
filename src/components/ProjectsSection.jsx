@@ -28,7 +28,7 @@ const ProjectCard = ({ project, index }) => {
                 <img
                   src={img}
                   alt={`${project.title} screenshot ${i + 1}`}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -37,7 +37,7 @@ const ProjectCard = ({ project, index }) => {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+            className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
