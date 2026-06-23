@@ -12,9 +12,9 @@ export const ThemeToggle = () => {
       className="p-2 rounded-full"
     >
       {theme === "light" ? (
-        <Moon className="w-6 h-6 text-black" />
+        <Moon className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
       ) : (
-        <Sun className="w-6 h-6 text-accent" />
+        <Sun className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
       )}
     </button>
   );

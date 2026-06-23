@@ -9,17 +9,17 @@ export default {
         display: ["Poppins", "sans-serif"],
       },
       colors: {
-        background: "#FAFAFA",
-        foreground: "#0A0A0A",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         muted: {
-          DEFAULT: "#F5F5F5",
-          foreground: "#737373",
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
         },
         accent: {
-          DEFAULT: "#0A0A0A",
-          foreground: "#FAFAFA",
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
         },
-        border: "#E5E5E5",
+        border: "var(--border)",
       },
       keyframes: {
         marquee: {

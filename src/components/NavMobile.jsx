@@ -1,57 +1,45 @@
-import { X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
-import LogoMobile from "/assets/logo-mobile.svg";
-import LogoDark from "/assets/logo-footer.svg";
 
 export const NavMobile = ({ isMenuOpen, setIsMenuOpen }) => {
   const { t } = useTranslation();
-  const navItems = ["plans", "projects", "process", "contact"];
+  const navItems = ["about", "cruce", "personal", "contact"];
 
   return (
     <nav
-      className={`fixed inset-0 z-[100] bg-primary transition-transform duration-300 md:hidden ${
-        isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+      className={`fixed inset-0 z-[100] bg-foreground text-background transition-transform duration-300 md:hidden ${
+        isMenuOpen ? "translate-x-0" : "translate-x-full"
       }`}
-      style={{ top: "0px" }}
     >
-      <div className="flex justify-end p-4 ">
+      <div className="flex justify-between items-center px-5 h-16 border-b border-background/10">
+        <span className="font-display font-bold text-lg tracking-tight">
+          Nicolas Bomben<span className="text-background/50">.</span>
+        </span>
         <button
-          className="text-primary font-semibold bg-background font-inter text-lg p-2 rounded-md shadow-md"
+          className="text-sm font-semibold border border-background/20 rounded-md px-4 py-2"
           onClick={() => setIsMenuOpen(false)}
         >
-          CLOSE MENU
+          Cerrar
         </button>
       </div>
-      <div className="container mx-auto text-2xl px-4 flex flex-col space-y-4 p-8">
+
+      <div className="flex flex-col px-6 py-10 gap-6">
         {navItems.map((item) => (
           <a
             key={item}
             href={`#${item}`}
-            className="text-white hover:text-gray-900 cursor-pointer border-b border-[#F5F5F5] transition-all duration-200 transform hover:translate-x-2"
+            className="font-display text-4xl font-bold tracking-tight text-background/80 hover:text-background transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             {t(`navBar.${item}`)}
           </a>
         ))}
       </div>
-      <div className="flex justify-center gap-4 py-4">
-        <LanguageToggle />
 
+      <div className="flex justify-center gap-4 mt-8">
+        <LanguageToggle />
         <ThemeToggle />
-      </div>
-      <div className="flex justify-center py-2">
-        <img
-          src={LogoMobile}
-          alt="mobile-logo-forgeTech"
-          className="h-16 w-auto dark:hidden"
-        />
-        <img
-          src={LogoDark}
-          alt="logo forgeTech"
-          className="h-16 w-auto hidden dark:block"
-        />
       </div>
     </nav>
   );

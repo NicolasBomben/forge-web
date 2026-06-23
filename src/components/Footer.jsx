@@ -1,64 +1,33 @@
-import { ArrowUp, Mail } from "lucide-react";
-import { FaLinkedin } from "react-icons/fa";
-import Logo from "/assets/logo-footer.svg";
+import { useTranslation } from "react-i18next";
+import { ArrowUp } from "lucide-react";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="bg-dark-background text-white py-8 mt-auto font-poppins relative">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          {/* Logo */}
-          <div>
-            <img src={Logo} alt="logo-forgeTech" />
-          </div>
+    <footer className="bg-foreground text-background border-t border-background/10 py-10 section-padding">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <p className="font-display text-xl font-bold tracking-tight">
+          {t("footer.copyright")}
+        </p>
 
-          {/* Social Links */}
-          <div className="flex justify-center gap-6 font-light">
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-primary transition-colors"
-              aria-label="Visit our LinkedIn profile"
-            >
-              <FaLinkedin className="w-6 h-6" />
-            </a>
+        <p className="text-sm text-background/50 order-last md:order-none">
+          © {currentYear} — Software Engineer
+        </p>
 
-            <a
-              href="mailto:bomben.dev@gmail.com"
-              className="text-gray-300 hover:text-primary transition-colors"
-              aria-label="Send email to bomben.dev@gmail.com"
-            >
-              <Mail className="w-6 h-6" />
-            </a>
-          </div>
-
-          {/* Back to Top Button */}
-          <div className="text-right block">
-            <button
-              onClick={scrollToTop}
-              className="inline-flex items-center gap-2 text-gray-300 font-light hover:text-primary transition-colors"
-              aria-label="Scroll back to top"
-            >
-              <span className="font-light">Back to top</span>
-              <ArrowUp className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-
-        {/* Copyright Notice */}
-        <div className="mt-8 text-center text-gray-400 text-sm">
-          <p className="font-light">All rights reserved by forgetech © {currentYear}</p>
-        </div>
+        <button
+          onClick={scrollToTop}
+          className="group inline-flex items-center gap-2 text-background/70 hover:text-background transition-colors"
+          aria-label="Volver arriba"
+        >
+          <span className="text-sm font-medium">Volver arriba</span>
+          <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+        </button>
       </div>
     </footer>
   );

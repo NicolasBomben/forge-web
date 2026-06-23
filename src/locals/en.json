@@ -1,94 +1,124 @@
 {
   "navBar": {
-    "plans": "Plans",
-    "projects": "Projects",
-    "process": "Process",
+    "about": "About",
+    "cruce": "CRUCE",
+    "personal": "Projects",
     "contact": "Contact"
   },
-  "heroSection": {
-    "heroLine1": "Your digital presence should bring you clients. We make it happen.",
-    "heroSubtitle": "We design Landing Pages and Websites 100% focused on results. The ideal tool for businesses, SMEs, and professionals looking for real growth on the internet.",
-    "contactButton": "Request a free consultation"
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Nicolas Bomben",
+    "role": "Software Engineer",
+    "description": "I build digital experiences that connect brands with people. Specialized in ecommerce with VTEX IO and scalable web solutions.",
+    "cta": "View projects"
   },
-  "weDoTitle": "What We Do",
-  "weDoSubtitle": "We create digital experiences that make a difference",
-  "weDoWebTitle": "Web Presence",
-  "weDoWebSubtitle": "We develop professional websites that establish and strengthen your digital presence.",
-  "weDoClientTitle": "Custom Solutions",
-  "weDoClientSubtitle": "Each solution is custom-designed to meet the specific goals and objectives of your business.",
-  "weDoApproachTitle": "Innovative Approach",
-  "weDoApproachSubtitle": "We bring creative ideas and modern technologies to solve your digital challenges.",
-  "weDoText": "We create websites for entrepreneurs and growing startups looking to boost their online presence, offering innovative solutions aimed at meeting each client's main objective.",
-  "weDoCallToAction": "Ready to transform your digital presence?",
-  "weDoButton": "Schedule a consultation",
-  "servicesTitle": "The Perfect Plan to Reach Your Goal",
-  "servicesSubTitle": "Two clear paths to success.\nAre you looking for quick results or to build a solid brand?",
-
-  "services": {
-    "landingPages": {
-      "title": "Launch Plan",
-      "description": "The ideal solution to start attracting clients from day one. We deliver a high-conversion Landing Page, optimized for your advertising campaigns, with technical maintenance included for 3 months."
-    },
-    "sitiosWeb": {
-      "title": "Authority Plan",
-      "description": "Build a solid brand that generates trust and positions you as an expert. We create a complete Institutional Website that showcases your experience and services, with initial SEO optimization so your clients can find you on Google."
-    }
+  "about": {
+    "title": "ABOUT ME",
+    "description": "Software Engineer with experience building high-performance ecommerce solutions. During my time at CRUCE, an agency specialized in VTEX IO, I worked with leading brands in Argentina developing online stores, custom components and management dashboards.",
+    "description2": "Currently focused on personal projects, exploring the potential of artificial intelligence applied to SaaS products.",
+    "skills": ["React", "TypeScript", "VTEX IO", "Node.js", "AWS", "Next.js", "Tailwind CSS", "PostgreSQL"]
   },
-
-  "pricing": {
-    "pricingTitle": "From Idea to Launch in 3 Clear Steps",
-    "pricingSubtitle": "A simple, transparent, and you-focused process.",
-    "basic": {
-      "name": "Diagnosis and Strategy",
-      "description": "We don't start designing without a plan. The first phase is an in-depth conversation to understand your goals, your ideal client, and your challenges. We come out of this with a clear strategy and an action plan for your project."
-    },
-    "professional": {
-      "name": "Design and Construction",
-      "description": "This is where the strategy becomes a reality. Our team designs an engaging user experience and builds your website with cutting-edge technology, keeping you updated on the progress so you can see your vision take shape."
-    },
-    "enterprise": {
-      "name": "Launch and Support",
-      "description": "We don't just hand over the files and disappear. We officially launch your website, ensure everything works perfectly, and provide you with simple training so you understand it. From here, our support begins."
-    }
-  },
-
-  "clients": {
-    "title": "Projects that Generate Results",
-    "testimonials": [
+  "cruce": {
+    "title": "MY TIME AT CRUCE",
+    "subtitle": "Agency specialized in ecommerce with VTEX IO",
+    "description": "I developed solutions for leading brands in retail, pharmacy, fashion and electronics. Custom components, integrations with external APIs and management dashboards.",
+    "projects": [
       {
-        "quote": "Thanks to the work done, we successfully established our presence in the digital world, connecting with more clients and expanding our online reach.",
-        "author": "Dataholics",
-        "website": "https://dataholics.site",
-        "image": "/assets/dataholics-site.png",
-        "imageWbp": "/assets/dataholics-site.webp",
-        "plan": "Launch Plan: Lead Capture Landing Page"
+        "id": "farmaplus",
+        "name": "FarmaPlus",
+        "category": "Pharmacy",
+        "description": "Evolutionary maintenance of the ecommerce. Development of custom components such as the shipping progress bar and shopping experience improvements.",
+        "technologies": ["VTEX IO", "React", "TypeScript"],
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-farmaplus-home-daba-soporte-evolutivo-UQdpIA7vwFrerppweYIcvdUZt2efE0.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-farmaplus-seccion-listados-u5oMmvCEE4m5Vk8pdCNyoBYBb6weLD.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-barra-de-envios-farmaplus-componente-desarrollado-RCX7iy5XU1o6NY7GWJXjUgcqtWLRVs.png"
+        ]
       },
       {
-        "quote": "I wanted something simple yet professional to showcase my business and the services I offer. The result exceeded my expectations and gave me a solid foundation to grow.",
-        "author": "Boschetti Bordoni",
-        "website": "https://boschettibordoni.com.ar",
-        "image": "/assets/boschetti-bordoni-site.png",
-        "imageWbp": "/assets/boschetti-bordoni-site.webp",
-        "plan": "Authority Plan: Institutional Website"
+        "id": "taverniti",
+        "name": "Taverniti",
+        "category": "Fashion",
+        "description": "Premium fashion ecommerce. Development of the home page, product listings and user experience optimized for conversion.",
+        "technologies": ["VTEX IO", "React", "GraphQL"],
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-taverniti-home-5HBnZziXdvfarhrWg9JziptrTKKxk0.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-taverniti-listados-N9utHjkE8PQB4YIIUbSYINBwXjU9Gt.png"
+        ]
       },
       {
-        "quote": "We wanted to give our website a new look: more minimalist, clean, and modern. Not only did we achieve that goal, but we also got a powerful tool for customers to leave their contact information. It has been incredibly useful for us.",
-        "author": "FanPro",
-        "website": "https://fanpro.com.ar/",
-        "image": "/assets/fanpro-site.png",
-        "imageWbp": "/assets/fanpro-site.webp",
-        "plan": "Launch Plan: Dual Channel Landing Page"
+        "id": "colorshop",
+        "name": "ColorShop",
+        "category": "Retail",
+        "description": "Paint and coatings store. Development of product cards with variant selector and pricing system.",
+        "technologies": ["VTEX IO", "React", "CSS"],
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-card-colorshop-componente-desarrollado-qyO1t628LF3tVMAwYiRQTUp62jpn1h.png"
+        ]
+      },
+      {
+        "id": "yuhmak",
+        "name": "Yuhmak",
+        "category": "Electronics",
+        "description": "Home appliances and technology ecommerce. Evolutionary maintenance with development of new features and optimizations.",
+        "technologies": ["VTEX IO", "React", "Node.js"],
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-yuhmak-home-soporte-evolutivo-BR2nDbxwztWhZloTdRsKrtvSqPSO1Y.png"
+        ]
+      },
+      {
+        "id": "saludglobal",
+        "name": "SaludGlobal",
+        "category": "Health",
+        "description": "Purchase order management dashboard. Integration with AWS services to centralize data coming from VTEX.",
+        "technologies": ["React", "AWS", "Node.js", "PostgreSQL"],
+        "images": []
       }
-    ],
-    "visitSite": "Visit the site"
+    ]
+  },
+  "personal": {
+    "title": "PERSONAL PROJECTS",
+    "subtitle": "Exploring new technologies and products",
+    "projects": [
+      {
+        "id": "chatbot-saas",
+        "name": "ChatBot SaaS",
+        "category": "SaaS / AI",
+        "description": "Intelligent chatbot platform that allows companies to automate their conversations with customers. Includes admin dashboard, lead capture, training with documents and websites, and embeddable widget.",
+        "technologies": ["Next.js", "TypeScript", "OpenAI", "PostgreSQL", "Tailwind CSS"],
+        "status": "In development",
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-dashboard-chatboot-login-5uwveuNfjHr9FHOKP5ca99dZrLKaEK.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-dashboard-chatboot-uno-16VONoqB5sUVBVGxI4892QDyWjfbfc.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-dashboard-chatboot-dos-C5CusND0FeoLBX8lKdxGg03YbTSEql.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-dashboard-chatboot-tres-Za10mdLUAaMMRjuAVOwk4Oz1zDdQ7A.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-dashboard-chatboot-cuatro-c2aybY29R7UzuST9MqnmUYhf6gvDhn.png"
+        ]
+      },
+      {
+        "id": "telmec",
+        "name": "Telmec",
+        "category": "Website",
+        "description": "Institutional website for an industrial precision mechanics company. Full development focused on showcasing the company's products and services.",
+        "technologies": ["React", "Tailwind CSS", "Framer Motion"],
+        "status": "Completed",
+        "url": "https://telmec.com.ar",
+        "images": [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto-telmec-proyecto-personal-DQ5wlf8ObND80OZJnibSqJBP7I97pv.png"
+        ]
+      }
+    ]
   },
   "contact": {
-    "title": "Ready to Get Started? Let's Talk.",
-    "subtitle": "Complete the following form and our team will contact you in less than 24 hours to schedule your free, no-obligation consultation.",
-    "namePlaceholder": "Your Name",
-    "emailPlaceholder": "Your Email Address",
-    "messagePlaceholder": "Hello, I am interested in your services. My project is about... and my main goal is...",
-    "submitButton": "Request my Free Consultation",
-    "alertMessage": "Message sent! We will get in touch with you as soon as possible."
+    "title": "LET'S TALK",
+    "subtitle": "I'm open to new opportunities and interesting projects",
+    "email": "contacto@nicolasbomben.com",
+    "linkedin": "linkedin.com/in/nicolasbomben",
+    "github": "github.com/nicolasbomben",
+    "cta": "Send message"
+  },
+  "footer": {
+    "copyright": "Nicolas Bomben",
+    "year": "2024"
   }
 }
