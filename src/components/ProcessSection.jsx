@@ -1,72 +1,80 @@
-import FadeContent from "../Animations/FadeContent/FadeContent";
+import { Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "./Reveal";
 
 export const ProcessSection = () => {
   const { t } = useTranslation();
-
-  const cards = [
-    {
-      id: "1",
-      title: t("pricing.basic.name"),
-      description: t("pricing.basic.description"),
-      border: "border-2 border-dashed border-primary dark:border-dark-accent2",
-    },
-    {
-      id: "2",
-      title: t("pricing.professional.name"),
-      description: t("pricing.professional.description"),
-      border: "border-2 border-dashed border-primary dark:border-dark-accent2",
-    },
-    {
-      id: "3",
-      title: t("pricing.enterprise.name"),
-      description: t("pricing.enterprise.description"),
-      border: "border-2 border-dashed border-primary dark:border-dark-accent2",
-    },
-  ];
+  const steps = ["step1", "step2", "step3"];
+  const answers = t("process.answers.items", { returnObjects: true });
+  const sells = t("process.sells.items", { returnObjects: true });
 
   return (
-    <section
-      id="process"
-      className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-6 bg-gray-50 dark:bg-dark-background"
-    >
+    <section id="como" className="border-t border-line bg-muted px-4 py-24 dark:border-dark-line dark:bg-dark-card/40">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="font-inter font-medium tracking-tight text-primary text-3xl sm:text-4xl md:text-5xl xl:text-6xl mb-4 dark:text-dark-accent2">
-            {t("pricing.pricingTitle")}
-          </h2>
-          <h3 className="font-inter font-light tracking-normal text-gray-600 dark:text-dark-primary mx-auto text-lg sm:text-xl md:text-4xl">
-            {t("pricing.pricingSubtitle")}
-          </h3>
+        <SectionHeading eyebrow={t("process.eyebrow")} title={t("process.title")} subtitle={t("process.subtitle")} />
+
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {steps.map((key, i) => (
+            <Reveal
+              key={key}
+              delay={i * 90}
+              className="flex flex-col gap-3.5 rounded-[22px] border border-line bg-white p-8 dark:border-dark-line dark:bg-dark-card"
+            >
+              <span className="font-poppins text-[46px] font-bold leading-none tracking-[-0.04em] text-brand/35">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="font-poppins text-xl font-bold uppercase tracking-[-0.02em] text-foreground dark:text-dark-primary">
+                {t(`process.${key}.title`)}
+              </h3>
+              <p className="font-inter text-base leading-relaxed text-muted-foreground dark:text-dark-muted">
+                {t(`process.${key}.body`)}
+              </p>
+            </Reveal>
+          ))}
         </div>
 
-        <FadeContent
-          blur={false}
-          duration={2000}
-          easing="ease-out"
-          initialOpacity={0}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto font-inter">
-            {cards.map((card, index) => (
-              <div
-                key={index}
-                className={`relative bg-white dark:bg-dark-background rounded-2xl ${card.border} p-8 shadow-lg hover:shadow-xl transition-shadow animate-fadeIn flex flex-col`}
-              >
-                <span className="font-inter text-4xl mb-4 text-gray-500 dark:text-dark-primary">
-                  {card.id}
-                </span>
-                <h3 className="font-inter text-2xl md:text-3xl font-medium dark:text-dark-primary mb-4 whitespace-nowrap text-balance">
-                  {card.title}
-                </h3>
-                <div className="flex-1 flex items-start">
-                  <p className="font-inter text-gray-600 dark:text-dark-primary font-normal md:text-lg text-left w-full">
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </FadeContent>
+        <div className="mt-5 grid items-stretch gap-5 lg:grid-cols-2">
+          <Reveal className="flex flex-col overflow-hidden rounded-[22px] border border-line bg-white dark:border-dark-line dark:bg-dark-card">
+            <div className="border-b border-line bg-muted px-7 py-6 dark:border-dark-line dark:bg-dark-background">
+              <h3 className="font-poppins text-[23px] font-bold uppercase tracking-[-0.02em] text-foreground dark:text-dark-primary">
+                {t("process.answers.title")}
+              </h3>
+              <p className="font-inter mt-2 text-[15px] text-muted-foreground dark:text-dark-muted">
+                {t("process.answers.subtitle")}
+              </p>
+            </div>
+            <ul className="flex flex-1 flex-col gap-3.5 px-7 py-6">
+              {(Array.isArray(answers) ? answers : []).map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <Check className="mt-0.5 h-[19px] w-[19px] shrink-0 text-brand" />
+                  <span className="font-inter text-[15.5px] leading-snug text-muted-foreground dark:text-dark-muted">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+
+          <Reveal delay={90} className="flex flex-col overflow-hidden rounded-[22px] border-2 border-brand bg-white dark:bg-dark-card">
+            <div className="bg-brand px-7 py-6">
+              <h3 className="font-poppins text-[23px] font-bold uppercase tracking-[-0.02em] text-white">
+                {t("process.sells.title")}
+              </h3>
+              <p className="font-inter mt-2 text-[15px] text-white/80">{t("process.sells.subtitle")}</p>
+            </div>
+            <ul className="flex flex-1 flex-col gap-3.5 px-7 py-6">
+              {(Array.isArray(sells) ? sells : []).map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <Check className="mt-0.5 h-[19px] w-[19px] shrink-0 text-brand" />
+                  <span className="font-inter text-[15.5px] leading-snug text-muted-foreground dark:text-dark-muted">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+
+        <p className="font-inter mt-7 max-w-[760px] text-[15px] text-muted-foreground dark:text-dark-muted">
+          {t("process.note")}
+        </p>
       </div>
     </section>
   );

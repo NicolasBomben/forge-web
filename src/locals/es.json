@@ -1,95 +1,227 @@
 {
   "navBar": {
-    "plans": "Planes",
-    "projects": "Proyectos",
-    "process": "Proceso",
-    "contact": "Contacto"
+    "asistente": "El asistente",
+    "como": "Cómo funciona",
+    "servicios": "Servicios",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "demo": "Pedir demo"
   },
   "heroSection": {
-    "heroLine1": "Tu presencia digital debería traerte clientes. \nNosotros hacemos que suceda.",
-    "heroSubtitle": "Diseñamos Landing Pages y Sitios Web enfocados 100% en resultados. La herramienta ideal para negocios, pymes y profesionales que buscan un crecimiento real en internet.",
-    "contactButton": "Solicitar asesoría gratuita"
+    "titleMain": "Tu negocio atiende las 24 horas.",
+    "titleAccent": "Vos dormís tranquilo.",
+    "subtitle": "Un asistente que responde, recomienda tus productos y te deja el contacto listo para vender.",
+    "primaryCta": "Pedir demo",
+    "secondaryCta": "Ver cómo funciona"
   },
-  "weDoTitle": "Lo que hacemos",
-  "weDoSubtitle": "Creamos experiencias digitales que marcan la diferencia",
-  "weDoWebTitle": "Presencia Web",
-  "weDoWebSubtitle": "Desarrollamos sitios web profesionales que establecen y fortalecen tu presencia digital.",
-  "weDoClientTitle": "Soluciones a medida",
-  "weDoClientSubtitle": "Cada solución está diseñada a medida para cumplir con los objetivos y metas específicas de tu negocio.",
-  "weDoApproachTitle": "Enfoque innovador",
-  "weDoApproachSubtitle": "Aportamos ideas creativas y tecnologías modernas para resolver tus desafíos digitales.",
-  "weDoText": "Creamos sitios web para emprendedores y startups en crecimiento que buscan potenciar su presencia en internet, ofreciendo soluciones innovadoras orientadas a cumplir el principal objetivo de cada cliente.",
-  "weDoCallToAction": "¿Listo para transformar tu presencia digital?",
-  "weDoButton": "Agendá una consulta",
-  "servicesTitle": "El Plan Perfecto Para Alcanzar tu Objetivo",
-  "servicesSubTitle": "Dos caminos claros hacia el éxito.\n¿Buscas resultados rápidos o construir una marca sólida?",
-
-  "services": {
-    "landingPages": {
-      "title": "Plan Despegue",
-      "description": "La solución ideal para empezar a captar clientes desde el primer día. Te entregamos una Landing Page de alta conversión, optimizada para tus campañas de publicidad, con el mantenimiento técnico incluido por 3 meses."
-    },
-    "sitiosWeb": {
-      "title": "Plan Autoridad",
-      "description": "Construye una marca sólida que genere confianza y te posicione como experto. Creamos un Sitio Web Institucional completo que muestra tu experiencia y servicios, con una optimización SEO inicial para que tus clientes te encuentren en Google."
-    }
-  },
-
-  "pricing": {
-    "pricingTitle": "De la Idea al Lanzamiento en 3 Pasos Claros",
-    "pricingSubtitle": "Un proceso simple, transparente y enfocado en ti.",
-    "basic": {
-      "name": "Diagnóstico y Estrategia",
-      "description": "No empezamos a diseñar sin un plan. La primera fase es una charla profunda para entender tus objetivos, tu cliente ideal y tus desafíos. Salimos de aquí con una estrategia clara y un plan de acción para tu proyecto."
-    },
-    "professional": {
-      "name": "Diseño y Construcción",
-      "description": "Aquí es donde la estrategia se convierte en realidad. Nuestro equipo diseña una experiencia de usuario atractiva y construye tu página web con tecnología de punta, manteniéndote al tanto de los avances para que veas cómo tu visión toma forma."
-    },
-    "enterprise": {
-      "name": "Lanzamiento y Soporte",
-      "description": "No te entregamos los archivos y desaparecemos. Realizamos el lanzamiento oficial de tu web, nos aseguramos de que todo funcione a la perfección y te damos una capacitación simple para que la entiendas. A partir de aquí, empieza nuestro soporte."
-    }
-  },
-
-  "clients": {
-    "title": "Proyectos que Generan Resultados",
-    "testimonials": [
+  "chatDemo": {
+    "title": "Asistente de tu negocio",
+    "status": "En línea · responde en segundos",
+    "inputHint": "Escribí tu consulta…",
+    "script": [
       {
-        "quote": "Gracias al trabajo realizado, logramos establecer con éxito nuestra presencia en el mundo digital, conectando con más clientes y expandiendo nuestro alcance en línea.",
-        "author": "Dataholics",
-        "website": "https://dataholics.site",
-        "image": "/assets/dataholics-site.png",
-        "imageWbp": "/assets/dataholics-site.webp",
-        "plan": "Plan Despegue: Landing Page de Captación"
+        "from": "user",
+        "text": "Hola! Hacen envíos a Córdoba?"
       },
       {
-        "quote": "Quería algo simple pero profesional para mostrar mi negocio y los servicios que ofrezco. El resultado superó mis expectativas y me dio una base sólida para crecer.",
-        "author": "Boschetti Bordoni",
-        "website": "https://boschettibordoni.com.ar",
-        "image": "/assets/boschetti-bordoni-site.png",
-        "imageWbp": "/assets/boschetti-bordoni-site.webp",
-        "plan" : "Plan Autoridad: Sitio Web Institucional"
+        "from": "bot",
+        "text": "Sí, enviamos a todo el país. A Córdoba llega en 48 a 72 hs y es gratis desde $80.000."
       },
       {
-        "quote": "Queríamos darle un nuevo aspecto a nuestro sitio web: más minimalista, limpio y moderno. No solo logramos ese objetivo, sino que también obtuvimos una herramienta poderosa para que los clientes dejen su información de contacto. Ha sido increíblemente útil para nosotros.",
-        "author": "FanPro",
-        "website": "https://fanpro.com.ar/",
-        "image": "/assets/fanpro-site.png",
-        "imageWbp": "/assets/fanpro-site.webp",
-        "plan": "Plan Despegue: Landing Page para Doble Canal"
+        "from": "user",
+        "text": "Tienen la campera negra en talle L?"
+      },
+      {
+        "from": "bot",
+        "text": "Sí, queda 1 en talle L a $94.500. Te dejo el link para comprarla ahora mismo 👉"
+      },
+      {
+        "from": "user",
+        "text": "Genial, gracias!"
+      },
+      {
+        "from": "bot",
+        "text": "Te paso mi mail así te aviso cuando entren más talles. ¿Me lo dejás?"
       }
-    ],
-    "visitSite": "Visita la web"
+    ]
   },
-
+  "layers": {
+    "eyebrow": "Las cuatro capas",
+    "title": "Todo tu negocio online, en cuatro capas",
+    "subtitle": "Podés empezar por la que más te urge. La mayoría empieza por Atención: es la que se nota desde el primer día.",
+    "attention": {
+      "eyebrow": "Atención",
+      "title": "El asistente responde solo",
+      "body1": "Lo entrenamos con tus PDFs, tus precios y el contenido de tu web. Contesta las mismas cien preguntas que hoy contestás vos, con el tono de tu marca, y cuando hace falta una persona deriva la charla a WhatsApp o al mail.",
+      "body2": "El mismo asistente responde también por WhatsApp e Instagram: tus clientes preguntan donde ya te escriben y todo el historial queda en un solo panel.",
+      "chips": [
+        "Entrenado con tu contenido",
+        "Habla como tu negocio",
+        "Deriva a una persona",
+        "Re-entrenable"
+      ],
+      "cta": "Pedir demo del asistente"
+    },
+    "sales": {
+      "eyebrow": "Venta",
+      "title": "Recomienda y vende",
+      "body": "Si vendés online, el asistente recomienda productos reales de tu tienda con precio, stock y link de compra. Deja de ser un buscador y empieza a ser un vendedor."
+    },
+    "presence": {
+      "eyebrow": "Presencia",
+      "title": "La web donde vive",
+      "body": "Si tu web todavía no está a la altura, la construimos nosotros: rápida, clara y pensada para que te contacten."
+    },
+    "operations": {
+      "eyebrow": "Operación",
+      "title": "Todo en un panel",
+      "body": "Conversaciones, contactos captados y qué te preguntan los clientes. Cada vez que alguien deja sus datos, te llega un mail."
+    }
+  },
+  "process": {
+    "eyebrow": "Cómo funciona",
+    "title": "De la charla al asistente andando",
+    "subtitle": "Vos nos contás cómo atendés hoy. Del resto nos encargamos nosotros.",
+    "step1": {
+      "title": "Juntamos tu información",
+      "body": "Tus PDFs, tu lista de precios, tus preguntas frecuentes, tu web. Todo lo que hoy vive en tu cabeza o en un WhatsApp, pasa a ser el conocimiento del asistente."
+    },
+    "step2": {
+      "title": "Lo vestimos con tu marca",
+      "body": "Colores, nombre, mensaje de bienvenida y tono. Ajustamos cómo responde hasta que suene como vos y no como un robot genérico."
+    },
+    "step3": {
+      "title": "Lo instalamos y no te soltamos",
+      "body": "Una línea de código en tu sitio y ya está atendiendo. Después seguimos mirando las conversaciones con vos para afinar lo que haga falta."
+    },
+    "answers": {
+      "title": "Asistente que responde",
+      "subtitle": "Para el negocio que se pasa el día contestando lo mismo.",
+      "items": [
+        "Entrenado con tus PDFs y el contenido de tu web, re-entrenable cuando actualizás",
+        "Ventana de chat con tu marca: colores, nombre y mensaje de bienvenida",
+        "Instalación con una línea de código en cualquier sitio",
+        "Captura de contactos y panel de administración",
+        "Historial de conversaciones y métricas básicas",
+        "Atiende en español e inglés"
+      ]
+    },
+    "sells": {
+      "title": "Asistente que además vende",
+      "subtitle": "Todo lo anterior, más las funciones de tienda y derivación.",
+      "items": [
+        "Recomienda productos reales de tu tienda con precio, stock y link de compra",
+        "Deriva la charla a WhatsApp o mail cuando hace falta una persona",
+        "Aviso por mail cada vez que se capta un contacto",
+        "Actualización automática del contenido de tu sitio",
+        "Modelo de IA premium: mejor tono y trato de marca",
+        "Analytics avanzado: preguntas frecuentes y temas sin respuesta"
+      ]
+    },
+    "note": "Las dos versiones corren sobre la misma plataforma: sumar las funciones de venta es activarlas, no empezar de cero. El precio depende de tu volumen de consultas — lo definimos en la demo."
+  },
+  "manifesto": {
+    "eyebrow": "En qué creemos",
+    "title": "Un cliente que no recibe respuesta no vuelve a preguntar",
+    "subtitle": "Casi siempre la venta no se pierde por el precio. Se pierde a las once de la noche, cuando alguien pregunta cuánto cuesta y nadie contesta hasta el otro día.",
+    "tools": {
+      "title": "Herramientas, no promesas",
+      "body": "No te vendemos “transformación digital”. Te dejamos algo andando que podés medir la primera semana."
+    },
+    "team": {
+      "title": "La IA no reemplaza a tu equipo",
+      "body": "Se ocupa de las consultas repetidas para que tu gente esté donde de verdad se define la venta."
+    },
+    "after": {
+      "title": "Nos quedamos después",
+      "body": "El día del lanzamiento no es el final. Es cuando empezamos a ver qué preguntan tus clientes de verdad."
+    }
+  },
+  "servicesBlock": {
+    "eyebrow": "También hacemos",
+    "title": "Software a la medida de cómo trabaja tu negocio",
+    "subtitle": "Somos desarrolladores antes que vendedores de planes. Si lo que necesitás no entra en una caja cerrada, lo construimos.",
+    "cta": "Agendar una llamada",
+    "sites": {
+      "title": "Sitios y landing pages",
+      "body": "La web donde el asistente vive: rápida, clara y pensada para que te contacten. Con el mantenimiento técnico incluido los primeros meses."
+    },
+    "integrations": {
+      "title": "Integraciones con terceros",
+      "body": "Conectamos lo que ya usás: tu tienda, tu sistema de gestión, medios de pago, CRM, planillas, WhatsApp. Que los datos viajen solos en vez de copiarlos a mano."
+    },
+    "custom": {
+      "title": "Desarrollos a medida",
+      "body": "Paneles internos, automatizaciones, portales de clientes, lo que tu operación necesite. Arrancamos por el problema concreto, no por una lista de features."
+    }
+  },
+  "faq": {
+    "eyebrow": "Preguntas",
+    "title": "Las preguntas que siempre nos hacen",
+    "items": [
+      {
+        "q": "¿Necesito saber de tecnología para usarlo?",
+        "a": "No. Nosotros lo configuramos, lo entrenamos y lo instalamos. Vos solo entrás al panel a ver las conversaciones y los contactos que se captaron, y eso se aprende en cinco minutos."
+      },
+      {
+        "q": "¿De dónde saca la información para responder?",
+        "a": "De lo que vos nos das: PDFs, listas de precios, preguntas frecuentes y el contenido de tu web. No inventa: si algo no está cargado, lo dice y deriva la consulta a una persona."
+      },
+      {
+        "q": "¿Funciona con mi tienda online?",
+        "a": "En la web se instala con una línea de código en cualquier sitio, sin importar con qué esté hecha tu tienda. Para que además recomiende productos reales con precio, stock y link de compra, necesitamos que tu plataforma nos deje conectarnos a su catálogo. La mayoría lo permite; antes de arrancar lo revisamos con vos y te decimos con qué se puede y con qué no, sin vueltas."
+      },
+      {
+        "q": "¿Cuánto tarda en estar andando?",
+        "a": "Depende de cuánta información haya que cargar, pero el arranque típico es de una a dos semanas desde que tenemos tu material."
+      },
+      {
+        "q": "¿Solo hacen chatbots o también otros desarrollos?",
+        "a": "También hacemos el resto: sitios y landing pages, integraciones con las herramientas que ya usás (tienda, sistema de gestión, medios de pago, CRM, planillas, WhatsApp) y desarrollos a medida como paneles internos o automatizaciones. Podés contratar solo eso, sin el asistente."
+      },
+      {
+        "q": "¿Tengo que tener una web para contratar el asistente?",
+        "a": "No es obligatorio: el asistente puede atender por WhatsApp e Instagram aunque todavía no tengas sitio. Si querés tenerlo, lo construimos nosotros y queda todo en un mismo lugar."
+      },
+      {
+        "q": "¿Cuánto cuesta?",
+        "a": "Depende de la versión y del volumen de consultas que reciba tu negocio. Lo definimos juntos en la demo, con un presupuesto cerrado y sin costos escondidos."
+      }
+    ]
+  },
   "contact": {
-    "title": "¿Listo para Empezar? Hablemos.",
-    "subtitle": "Completa el siguiente formulario y nuestro equipo se pondrá en contacto en menos de 24 horas para agendar tu asesoría gratuita. Sin compromiso.",
-    "namePlaceholder": "Tu Nombre",
-    "emailPlaceholder": "Tu Correo Electrónico",
-    "messagePlaceholder": "Hola, estoy interesado en sus servicios. Mi proyecto se trata de... y mi principal objetivo es..",
-    "submitButton": "Solicitar mi Asesoría Gratuita",
-    "alertMessage": "¡Mensaje enviado! Nos pondremos en contacto contigo lo antes posible."
+    "eyebrow": "Contacto",
+    "title": "Pedí la demo. Es una charla, no una venta.",
+    "stepInterest": "01 · Qué te interesa",
+    "stepName": "02 · Tu nombre",
+    "stepEmail": "03 · Tu correo",
+    "stepMessage": "04 · Contanos un poco",
+    "interests": [
+      "El asistente para mi negocio",
+      "El asistente para mi tienda online",
+      "Una web o landing page",
+      "Integraciones o desarrollo a medida"
+    ],
+    "namePlaceholder": "Nombre y apellido",
+    "emailPlaceholder": "vos@tunegocio.com",
+    "messagePlaceholder": "Tenemos una tienda de indumentaria y nos llegan muchas consultas por talles y envíos…",
+    "submitButton": "Pedir mi demo",
+    "whatsappLabel": "Prefiero escribir",
+    "mailLabel": "Por mail",
+    "perks": [
+      "Demo armada con datos de tu negocio",
+      "Te decimos si te conviene o no",
+      "Respuesta en menos de 24 horas"
+    ],
+    "alertMessage": "¡Mensaje enviado! Te escribimos en menos de 24 horas."
+  },
+  "footer": {
+    "eyebrow": "¿Arrancamos?",
+    "title": "Contanos qué te preguntan tus clientes.",
+    "navTitle": "Navegación",
+    "writeTitle": "Escribinos",
+    "demoLink": "Pedir demo",
+    "rights": "Todos los derechos reservados · ForgeTech",
+    "tagline": "Desarrollo de software · Argentina"
   }
 }

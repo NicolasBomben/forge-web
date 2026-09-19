@@ -1,94 +1,227 @@
 {
   "navBar": {
-    "plans": "Plans",
-    "projects": "Projects",
-    "process": "Process",
-    "contact": "Contact"
+    "asistente": "The assistant",
+    "como": "How it works",
+    "servicios": "Services",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "demo": "Get a demo"
   },
   "heroSection": {
-    "heroLine1": "Your digital presence should bring you clients. We make it happen.",
-    "heroSubtitle": "We design Landing Pages and Websites 100% focused on results. The ideal tool for businesses, SMEs, and professionals looking for real growth on the internet.",
-    "contactButton": "Request a free consultation"
+    "titleMain": "Your business answers 24 hours a day.",
+    "titleAccent": "You sleep well.",
+    "subtitle": "An assistant that answers, recommends your products and hands you the lead ready to sell.",
+    "primaryCta": "Get a demo",
+    "secondaryCta": "See how it works"
   },
-  "weDoTitle": "What We Do",
-  "weDoSubtitle": "We create digital experiences that make a difference",
-  "weDoWebTitle": "Web Presence",
-  "weDoWebSubtitle": "We develop professional websites that establish and strengthen your digital presence.",
-  "weDoClientTitle": "Custom Solutions",
-  "weDoClientSubtitle": "Each solution is custom-designed to meet the specific goals and objectives of your business.",
-  "weDoApproachTitle": "Innovative Approach",
-  "weDoApproachSubtitle": "We bring creative ideas and modern technologies to solve your digital challenges.",
-  "weDoText": "We create websites for entrepreneurs and growing startups looking to boost their online presence, offering innovative solutions aimed at meeting each client's main objective.",
-  "weDoCallToAction": "Ready to transform your digital presence?",
-  "weDoButton": "Schedule a consultation",
-  "servicesTitle": "The Perfect Plan to Reach Your Goal",
-  "servicesSubTitle": "Two clear paths to success.\nAre you looking for quick results or to build a solid brand?",
-
-  "services": {
-    "landingPages": {
-      "title": "Launch Plan",
-      "description": "The ideal solution to start attracting clients from day one. We deliver a high-conversion Landing Page, optimized for your advertising campaigns, with technical maintenance included for 3 months."
-    },
-    "sitiosWeb": {
-      "title": "Authority Plan",
-      "description": "Build a solid brand that generates trust and positions you as an expert. We create a complete Institutional Website that showcases your experience and services, with initial SEO optimization so your clients can find you on Google."
-    }
-  },
-
-  "pricing": {
-    "pricingTitle": "From Idea to Launch in 3 Clear Steps",
-    "pricingSubtitle": "A simple, transparent, and you-focused process.",
-    "basic": {
-      "name": "Diagnosis and Strategy",
-      "description": "We don't start designing without a plan. The first phase is an in-depth conversation to understand your goals, your ideal client, and your challenges. We come out of this with a clear strategy and an action plan for your project."
-    },
-    "professional": {
-      "name": "Design and Construction",
-      "description": "This is where the strategy becomes a reality. Our team designs an engaging user experience and builds your website with cutting-edge technology, keeping you updated on the progress so you can see your vision take shape."
-    },
-    "enterprise": {
-      "name": "Launch and Support",
-      "description": "We don't just hand over the files and disappear. We officially launch your website, ensure everything works perfectly, and provide you with simple training so you understand it. From here, our support begins."
-    }
-  },
-
-  "clients": {
-    "title": "Projects that Generate Results",
-    "testimonials": [
+  "chatDemo": {
+    "title": "Your business assistant",
+    "status": "Online · replies in seconds",
+    "inputHint": "Type your question…",
+    "script": [
       {
-        "quote": "Thanks to the work done, we successfully established our presence in the digital world, connecting with more clients and expanding our online reach.",
-        "author": "Dataholics",
-        "website": "https://dataholics.site",
-        "image": "/assets/dataholics-site.png",
-        "imageWbp": "/assets/dataholics-site.webp",
-        "plan": "Launch Plan: Lead Capture Landing Page"
+        "from": "user",
+        "text": "Hi! Do you ship to Cordoba?"
       },
       {
-        "quote": "I wanted something simple yet professional to showcase my business and the services I offer. The result exceeded my expectations and gave me a solid foundation to grow.",
-        "author": "Boschetti Bordoni",
-        "website": "https://boschettibordoni.com.ar",
-        "image": "/assets/boschetti-bordoni-site.png",
-        "imageWbp": "/assets/boschetti-bordoni-site.webp",
-        "plan": "Authority Plan: Institutional Website"
+        "from": "bot",
+        "text": "Yes, we ship nationwide. Cordoba takes 48 to 72 hs and it is free over $80,000."
       },
       {
-        "quote": "We wanted to give our website a new look: more minimalist, clean, and modern. Not only did we achieve that goal, but we also got a powerful tool for customers to leave their contact information. It has been incredibly useful for us.",
-        "author": "FanPro",
-        "website": "https://fanpro.com.ar/",
-        "image": "/assets/fanpro-site.png",
-        "imageWbp": "/assets/fanpro-site.webp",
-        "plan": "Launch Plan: Dual Channel Landing Page"
+        "from": "user",
+        "text": "Do you have the black jacket in size L?"
+      },
+      {
+        "from": "bot",
+        "text": "Yes, 1 left in size L at $94,500. Here is the link to buy it right now 👉"
+      },
+      {
+        "from": "user",
+        "text": "Great, thanks!"
+      },
+      {
+        "from": "bot",
+        "text": "Leave me your email and I will let you know when more sizes arrive."
       }
-    ],
-    "visitSite": "Visit the site"
+    ]
+  },
+  "layers": {
+    "eyebrow": "The four layers",
+    "title": "Your whole business online, in four layers",
+    "subtitle": "Start with the one that hurts most. Most people start with Support: it shows from day one.",
+    "attention": {
+      "eyebrow": "Support",
+      "title": "The assistant answers on its own",
+      "body1": "We train it with your PDFs, your prices and your website content. It answers the same hundred questions you answer today, in your brand voice, and hands the chat over to WhatsApp or email when a human is needed.",
+      "body2": "And it does not only live on your site: the same assistant also replies on WhatsApp and Instagram, with every conversation in a single panel.",
+      "chips": [
+        "Trained on your content",
+        "Sounds like your business",
+        "Hands over to a human",
+        "Retrainable"
+      ],
+      "cta": "Get a demo of the assistant"
+    },
+    "sales": {
+      "eyebrow": "Sales",
+      "title": "Recommends and sells",
+      "body": "If you sell online, the assistant recommends real products from your store with price, stock and a buy link. It stops being a search box and starts being a salesperson."
+    },
+    "presence": {
+      "eyebrow": "Presence",
+      "title": "The site it lives on",
+      "body": "If your website is not up to par yet, we build it: fast, clear and designed to get you contacted."
+    },
+    "operations": {
+      "eyebrow": "Operations",
+      "title": "Everything in one panel",
+      "body": "Conversations, captured leads and what your customers keep asking. Every time someone leaves their details, you get an email."
+    }
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "title": "From the first call to a live assistant",
+    "subtitle": "You tell us how you handle questions today. We take care of the rest.",
+    "step1": {
+      "title": "We gather your information",
+      "body": "Your PDFs, your price list, your FAQs, your website. Everything that lives in your head or in a WhatsApp thread becomes the assistant knowledge base."
+    },
+    "step2": {
+      "title": "We dress it in your brand",
+      "body": "Colors, name, welcome message and tone. We tune how it replies until it sounds like you and not like a generic robot."
+    },
+    "step3": {
+      "title": "We install it and stay with you",
+      "body": "One line of code on your site and it is answering. Then we keep reviewing conversations with you to fine-tune whatever is needed."
+    },
+    "answers": {
+      "title": "Assistant that answers",
+      "subtitle": "For the business that spends the day repeating itself.",
+      "items": [
+        "Trained on your PDFs and website content, retrainable whenever you update",
+        "Chat window in your brand: colors, name and welcome message",
+        "One-line install on any site",
+        "Lead capture and admin panel",
+        "Conversation history and basic metrics",
+        "Answers in Spanish and English"
+      ]
+    },
+    "sells": {
+      "title": "Assistant that also sells",
+      "subtitle": "Everything above, plus store and hand-off features.",
+      "items": [
+        "Recommends real products with price, stock and buy link",
+        "Hands the chat to WhatsApp or email when a human is needed",
+        "Email alert every time a lead is captured",
+        "Automatic refresh of your site content",
+        "Premium AI model: better tone and brand handling",
+        "Advanced analytics: top questions and unanswered topics"
+      ]
+    },
+    "note": "Both versions run on the same platform: adding the sales features is a switch, not a restart. Pricing depends on your conversation volume — we define it in the demo."
+  },
+  "manifesto": {
+    "eyebrow": "What we believe",
+    "title": "A customer who gets no answer never asks again",
+    "subtitle": "Sales are rarely lost on price. They are lost at eleven at night, when someone asks how much it costs and nobody replies until the next day.",
+    "tools": {
+      "title": "Tools, not promises",
+      "body": "We do not sell you “digital transformation”. We leave you something running that you can measure in the first week."
+    },
+    "team": {
+      "title": "AI does not replace your team",
+      "body": "It takes the repetitive questions so your people can be where the sale is actually won."
+    },
+    "after": {
+      "title": "We stay afterwards",
+      "body": "Launch day is not the end. It is when we start seeing what your customers really ask."
+    }
+  },
+  "servicesBlock": {
+    "eyebrow": "We also build",
+    "title": "Software shaped around how your business works",
+    "subtitle": "We are developers before we are plan sellers. If what you need does not fit in a box, we build it.",
+    "cta": "Book a call",
+    "sites": {
+      "title": "Websites and landing pages",
+      "body": "The site the assistant lives on: fast, clear and designed to get you contacted. Technical maintenance included for the first months."
+    },
+    "integrations": {
+      "title": "Third-party integrations",
+      "body": "We connect what you already use: your store, your management system, payment providers, CRM, spreadsheets, WhatsApp. Let the data travel on its own instead of being copied by hand."
+    },
+    "custom": {
+      "title": "Custom development",
+      "body": "Internal dashboards, automations, client portals — whatever your operation needs. We start from the concrete problem, not from a feature list."
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "The questions we always get",
+    "items": [
+      {
+        "q": "Do I need to be technical to use it?",
+        "a": "No. We configure, train and install it. You just open the panel to see conversations and captured leads, and that takes five minutes to learn."
+      },
+      {
+        "q": "Where does it get its answers from?",
+        "a": "From what you give us: PDFs, price lists, FAQs and your website content. It does not make things up: if something is not loaded, it says so and hands the question to a human."
+      },
+      {
+        "q": "Does it work with my online store?",
+        "a": "On the web it installs with one line of code on any site, whatever your store is built with. For it to also recommend real products with price, stock and buy link, your platform needs to let us connect to its catalog. Most do; we review it with you before starting and tell you straight what is possible."
+      },
+      {
+        "q": "How long until it is running?",
+        "a": "It depends on how much information there is to load, but a typical start is one to two weeks from the moment we have your material."
+      },
+      {
+        "q": "Do you only build chatbots, or other software too?",
+        "a": "We build the rest too: websites and landing pages, integrations with the tools you already use (store, management system, payments, CRM, spreadsheets, WhatsApp) and custom development such as internal dashboards or automations. You can hire just that, without the assistant."
+      },
+      {
+        "q": "Do I need a website to get the assistant?",
+        "a": "Not necessarily: the assistant can answer on WhatsApp and Instagram even if you do not have a site yet. If you want one, we build it and everything lives in one place."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "It depends on the version and the conversation volume your business gets. We define it together in the demo, with a fixed quote and no hidden costs."
+      }
+    ]
   },
   "contact": {
-    "title": "Ready to Get Started? Let's Talk.",
-    "subtitle": "Complete the following form and our team will contact you in less than 24 hours to schedule your free, no-obligation consultation.",
-    "namePlaceholder": "Your Name",
-    "emailPlaceholder": "Your Email Address",
-    "messagePlaceholder": "Hello, I am interested in your services. My project is about... and my main goal is...",
-    "submitButton": "Request my Free Consultation",
-    "alertMessage": "Message sent! We will get in touch with you as soon as possible."
+    "eyebrow": "Contact",
+    "title": "Get the demo. It is a conversation, not a pitch.",
+    "stepInterest": "01 · What you are after",
+    "stepName": "02 · Your name",
+    "stepEmail": "03 · Your email",
+    "stepMessage": "04 · Tell us a bit",
+    "interests": [
+      "The assistant for my business",
+      "The assistant for my online store",
+      "A website or landing page",
+      "Integrations or custom development"
+    ],
+    "namePlaceholder": "Full name",
+    "emailPlaceholder": "you@yourbusiness.com",
+    "messagePlaceholder": "We run a clothing store and get a lot of questions about sizes and shipping…",
+    "submitButton": "Get my demo",
+    "whatsappLabel": "I would rather write",
+    "mailLabel": "By email",
+    "perks": [
+      "Demo built with your own data",
+      "We tell you if it is worth it or not",
+      "Reply in under 24 hours"
+    ],
+    "alertMessage": "Message sent! We will write back within 24 hours."
+  },
+  "footer": {
+    "eyebrow": "Shall we start?",
+    "title": "Tell us what your customers keep asking.",
+    "navTitle": "Navigation",
+    "writeTitle": "Write to us",
+    "demoLink": "Get a demo",
+    "rights": "All rights reserved · ForgeTech",
+    "tagline": "Software development · Argentina"
   }
 }

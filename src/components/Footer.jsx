@@ -1,63 +1,57 @@
-import { ArrowUp, Mail } from "lucide-react";
-import { FaLinkedin } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import Logo from "/assets/logo-footer.svg";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const nav = ["asistente", "como", "servicios", "faq"];
 
   return (
-    <footer className="bg-dark-background text-white py-8 mt-auto font-poppins relative">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          {/* Logo */}
+    <footer className="mt-auto overflow-hidden bg-ink px-4 pb-7 pt-24 text-ink-foreground">
+      <div className="container mx-auto">
+        <div className="grid items-start gap-14 lg:grid-cols-2">
           <div>
-            <img src={Logo} alt="logo-forgeTech" />
-          </div>
-
-          {/* Social Links */}
-          <div className="flex justify-center gap-6 font-light">
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-primary transition-colors"
-              aria-label="Visit our LinkedIn profile"
-            >
-              <FaLinkedin className="w-6 h-6" />
-            </a>
-
-            <a
-              href="mailto:bomben.dev@gmail.com"
-              className="text-gray-300 hover:text-primary transition-colors"
-              aria-label="Send email to bomben.dev@gmail.com"
-            >
-              <Mail className="w-6 h-6" />
+            <p className="font-inter text-xs font-semibold uppercase tracking-[0.14em] text-white/45">
+              {t("footer.eyebrow")}
+            </p>
+            <h2 className="font-poppins mt-4 text-3xl font-bold uppercase leading-[1.02] tracking-[-0.03em] sm:text-5xl lg:text-[62px]">
+              {t("footer.title")}
+            </h2>
+            <a href="mailto:contacto@forgetech.dev" className="font-poppins mt-7 inline-block border-b-2 border-white/25 pb-1 text-xl font-medium text-ink-foreground transition-colors hover:border-white hover:text-white sm:text-2xl lg:text-[28px]">
+              contacto@forgetech.dev
             </a>
           </div>
 
-          {/* Back to Top Button */}
-          <div className="text-right block">
-            <button
-              onClick={scrollToTop}
-              className="inline-flex items-center gap-2 text-gray-300 font-light hover:text-primary transition-colors"
-              aria-label="Scroll back to top"
-            >
-              <span className="font-light">Back to top</span>
-              <ArrowUp className="w-4 h-4" />
-            </button>
+          <div className="grid gap-10 sm:grid-cols-2 lg:justify-items-end">
+            <div className="flex flex-col gap-3.5">
+              <p className="font-inter text-[11.5px] font-semibold uppercase tracking-[0.14em] text-white/45">
+                {t("footer.navTitle")}
+              </p>
+              {nav.map((item) => (
+                <a key={item} href={`#${item}`} className="font-inter text-[15.5px] text-white/75 transition-colors hover:text-white">
+                  {t(`navBar.${item}`)}
+                </a>
+              ))}
+            </div>
+
+            <div className="flex flex-col gap-3.5">
+              <p className="font-inter text-[11.5px] font-semibold uppercase tracking-[0.14em] text-white/45">
+                {t("footer.writeTitle")}
+              </p>
+              <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" className="font-inter text-[15.5px] text-white/75 transition-colors hover:text-white">WhatsApp</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="font-inter text-[15.5px] text-white/75 transition-colors hover:text-white">LinkedIn</a>
+              <a href="#contact" className="font-inter text-[15.5px] text-white/75 transition-colors hover:text-white">{t("footer.demoLink")}</a>
+            </div>
           </div>
         </div>
 
-        {/* Copyright Notice */}
-        <div className="mt-8 text-center text-gray-400 text-sm">
-          <p className="font-light">All rights reserved by forgetech © {currentYear}</p>
+        <img src={Logo} alt="logo forgeTech" className="mx-auto mt-16 block h-auto w-full max-w-[1200px] opacity-90" />
+
+        <div className="mt-7 flex flex-wrap items-center justify-between gap-3.5 border-t border-dark-line pt-6">
+          <p className="font-inter text-[13px] text-white/50">
+            {t("footer.rights")} \u00a9 {currentYear}
+          </p>
+          <p className="font-inter text-[13px] text-white/50">{t("footer.tagline")}</p>
         </div>
       </div>
     </footer>
