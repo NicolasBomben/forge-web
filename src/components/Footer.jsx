@@ -49,7 +49,7 @@ export const Footer = () => {
 
         <div className="mt-7 flex flex-wrap items-center justify-between gap-3.5 border-t border-dark-line pt-6">
           <p className="font-inter text-[13px] text-white/50">
-            {t("footer.rights")} \u00a9 {currentYear}
+            {t("footer.rights")} &copy; {currentYear}
           </p>
           <p className="font-inter text-[13px] text-white/50">{t("footer.tagline")}</p>
         </div>
