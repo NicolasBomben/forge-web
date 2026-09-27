@@ -2,13 +2,18 @@ import { useEffect, useRef, useState } from "react";
 import { Bot, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+interface ChatMessage {
+  from: "user" | "bot";
+  text: string;
+}
+
 /** Demo animada del ChatBot SaaS: panel con scroll propio y autoscroll. */
 export const ChatDemo = () => {
   const { t } = useTranslation();
-  const script = t("chatDemo.script", { returnObjects: true });
+  const script = t("chatDemo.script", { returnObjects: true }) as ChatMessage[];
   const [step, setStep] = useState(2);
   const [typing, setTyping] = useState(false);
-  const bodyRef = useRef(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = bodyRef.current;
@@ -17,7 +22,7 @@ export const ChatDemo = () => {
 
   useEffect(() => {
     if (!Array.isArray(script) || script.length === 0) return;
-    let typingTimer;
+    let typingTimer: ReturnType<typeof setTimeout> | undefined;
     const next = step + 1;
 
     if (next > script.length) {

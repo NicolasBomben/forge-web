@@ -3,10 +3,16 @@ import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
 import LogoMobile from "/assets/logo-mobile.svg";
 import LogoDark from "/assets/logo-footer.svg";
+import type { Dispatch, SetStateAction } from "react";
 
 const navItems = ["asistente", "como", "servicios", "faq", "contact"];
 
-export const NavMobile = ({ isMenuOpen, setIsMenuOpen }) => {
+interface NavMobileProps {
+  isMenuOpen: boolean;
+  setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+export const NavMobile = ({ isMenuOpen, setIsMenuOpen }: NavMobileProps) => {
   const { t } = useTranslation();
 
   return (

@@ -7,21 +7,24 @@ function MetaPixelScript() {
   useEffect(() => {
     // Verificamos si la función del Píxel (fbq) ya existe.
     // Si no existe, la inicializamos. Esto evita que el script se cargue múltiples veces.
-        /* global fbq */
     if (window.fbq) return;
 
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    (function(f: Window, b: Document, e: string, v: string)
+    {if(f.fbq)return;const n=f.fbq=function(...args: unknown[]){if(n.callMethod)
+    {n.callMethod(...args);}else{n.queue.push(args);}} as FacebookPixel;
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=true;n.version='2.0';
+    n.queue=[];const t=b.createElement(e) as HTMLScriptElement;t.async=true;
+    t.src=v;const s=b.getElementsByTagName(e)[0];
+    s.parentNode!.insertBefore(t,s)})(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
+    // TS keeps window.fbq narrowed to undefined from the early return above,
+    // but the snippet has just defined it.
+    const fbq = window.fbq as FacebookPixel | undefined;
+
     // Inicializamos el Píxel y enviamos el evento PageView
-    fbq('init', '1554415025547295');
-    fbq('track', 'PageView');
+    fbq?.('init', '1554415025547295');
+    fbq?.('track', 'PageView');
 
   }, []); // El array vacío [] asegura que este efecto se ejecute solo una vez.
 

@@ -22,7 +22,7 @@ i18next
     .init({
         resources,
         fallbackLng: "es",
-        to: {
+        interpolation: {
             escapeValue: false
         }
     });

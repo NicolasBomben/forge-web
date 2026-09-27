@@ -6,8 +6,8 @@ import { Reveal } from "./Reveal";
 export const ProcessSection = () => {
   const { t } = useTranslation();
   const steps = ["step1", "step2", "step3"];
-  const answers = t("process.answers.items", { returnObjects: true });
-  const sells = t("process.sells.items", { returnObjects: true });
+  const answers = t("process.answers.items", { returnObjects: true }) as string[];
+  const sells = t("process.sells.items", { returnObjects: true }) as string[];
 
   return (
     <section id="como" className="border-t border-line bg-muted px-4 py-24 dark:border-dark-line dark:bg-dark-card/40">

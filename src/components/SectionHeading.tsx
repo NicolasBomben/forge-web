@@ -1,6 +1,14 @@
+import type { ReactNode } from "react";
 import { Reveal } from "./Reveal";
 
-export const SectionHeading = ({ eyebrow, title, subtitle, onDark = false }) => (
+interface SectionHeadingProps {
+  eyebrow: ReactNode;
+  title: ReactNode;
+  subtitle?: ReactNode;
+  onDark?: boolean;
+}
+
+export const SectionHeading = ({ eyebrow, title, subtitle, onDark = false }: SectionHeadingProps) => (
   <div>
     <span
       className={`font-inter text-xs font-semibold uppercase tracking-[0.16em] ${

@@ -1,8 +1,15 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ElementType, type ReactNode } from "react";
+
+interface RevealProps {
+  children?: ReactNode;
+  className?: string;
+  delay?: number;
+  as?: ElementType;
+}
 
 /** Revelado suave al entrar en viewport (una sola vez). */
-export const Reveal = ({ children, className = "", delay = 0, as: Tag = "div" }) => {
-  const ref = useRef(null);
+export const Reveal = ({ children, className = "", delay = 0, as: Tag = "div" }: RevealProps) => {
+  const ref = useRef<HTMLElement>(null);
   const [shown, setShown] = useState(false);
 
   useEffect(() => {

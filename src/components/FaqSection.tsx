@@ -3,9 +3,14 @@ import { useTranslation } from "react-i18next";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
 export const FaqSection = () => {
   const { t } = useTranslation();
-  const items = t("faq.items", { returnObjects: true });
+  const items = t("faq.items", { returnObjects: true }) as FaqItem[];
   const [open, setOpen] = useState(0);
 
   return (

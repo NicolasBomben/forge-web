@@ -1,13 +1,15 @@
-import { Monitor, Plug, PhoneCall, Wrench } from "lucide-react";
+import { Monitor, Plug, PhoneCall, Wrench, type LucideIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
-const icons = { sites: Monitor, integrations: Plug, custom: Wrench };
+type ServiceKey = "sites" | "integrations" | "custom";
+
+const icons: Record<ServiceKey, LucideIcon> = { sites: Monitor, integrations: Plug, custom: Wrench };
 
 export const ServicesSection = () => {
   const { t } = useTranslation();
-  const items = ["sites", "integrations", "custom"];
+  const items: ServiceKey[] = ["sites", "integrations", "custom"];
 
   return (
     <section id="servicios" className="border-t border-line px-4 py-24 dark:border-dark-line">

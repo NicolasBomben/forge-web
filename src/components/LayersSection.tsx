@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 
 export const LayersSection = () => {
   const { t } = useTranslation();
-  const chips = t("layers.attention.chips", { returnObjects: true });
+  const chips = t("layers.attention.chips", { returnObjects: true }) as string[];
   const cards = ["sales", "presence", "operations"];
 
   return (

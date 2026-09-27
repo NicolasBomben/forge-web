@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
@@ -9,8 +9,8 @@ const WHATSAPP = "5491100000000"; // TODO: reemplazar por el numero real
 
 export const ContactSection = () => {
   const { t } = useTranslation();
-  const interests = t("contact.interests", { returnObjects: true });
-  const perks = t("contact.perks", { returnObjects: true });
+  const interests = t("contact.interests", { returnObjects: true }) as string[];
+  const perks = t("contact.perks", { returnObjects: true }) as string[];
   const [interest, setInterest] = useState(Array.isArray(interests) ? interests[0] : "");
 
   const { name, email, message, onInputChange, onResetForm } = useForm({
@@ -19,8 +19,7 @@ export const ContactSection = () => {
     message: "",
   });
 
-  const handleSubmit = async (e) => {
-    /* global fbq */
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -37,13 +36,13 @@ export const ContactSection = () => {
           position: "top-center",
           progressClassName: "bg-brand",
         });
-        if (typeof fbq === "function") fbq("track", "Lead");
+        if (typeof window.fbq === "function") window.fbq("track", "Lead");
         onResetForm();
       } else {
         toast.error(result.message);
       }
     } catch (err) {
-      toast.error(err.message);
+      toast.error((err as Error).message);
     }
   };
 
