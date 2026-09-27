@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react";
-import { ThemeContext } from "./theme-context";
+import { useState, useEffect, type ReactNode } from "react";
+import { ThemeContext, type Theme } from "./theme-context";
 
-import PropTypes from "prop-types";
+interface ThemeProviderProps {
+    children: ReactNode;
+}
 
-export const ThemeProvider = ({ children }) => {
-    const[theme, setTheme] = useState("dark");
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+    const[theme, setTheme] = useState<Theme>("dark");
 
     //detectar tema principal en localStorage y preferencias.
     useEffect(() => {
 
-        const savedTheme = localStorage.getItem("theme");
+        const savedTheme = localStorage.getItem("theme") as Theme | null;
 
         if(savedTheme){
             setTheme(savedTheme);
@@ -39,8 +41,4 @@ export const ThemeProvider = ({ children }) => {
             {children}
         </ThemeContext.Provider>
     );
-};
-
-ThemeProvider.propTypes = {
-    children: PropTypes.node.isRequired,
 };

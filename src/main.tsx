@@ -12,7 +12,7 @@ import "@fontsource/poppins/500.css"; // Medium (subtítulos)
 import "@fontsource/poppins/600.css"; // Semibold (títulos)
 import "@fontsource/poppins/700.css"; // Bold (títulos principales)
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
       <App />
