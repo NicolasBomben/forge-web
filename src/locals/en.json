@@ -192,28 +192,13 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Get the demo. It is a conversation, not a pitch.",
-    "stepInterest": "01 · What you are after",
-    "stepName": "02 · Your name",
-    "stepEmail": "03 · Your email",
-    "stepMessage": "04 · Tell us a bit",
-    "interests": [
-      "The assistant for my business",
-      "The assistant for my online store",
-      "A website or landing page",
-      "Integrations or custom development"
-    ],
-    "namePlaceholder": "Full name",
-    "emailPlaceholder": "you@yourbusiness.com",
-    "messagePlaceholder": "We run a clothing store and get a lot of questions about sizes and shipping…",
-    "submitButton": "Get my demo",
-    "whatsappLabel": "I would rather write",
+    "whatsappLabel": "On WhatsApp",
     "mailLabel": "By email",
     "perks": [
       "Demo built with your own data",
       "We tell you if it is worth it or not",
       "Reply in under 24 hours"
-    ],
-    "alertMessage": "Message sent! We will write back within 24 hours."
+    ]
   },
   "footer": {
     "eyebrow": "Shall we start?",
