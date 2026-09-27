@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Logo from "/assets/logo-footer.svg";
+import { CONTACT_EMAIL, WHATSAPP_URL, trackContact } from "../utils/contact";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -17,8 +18,8 @@ export const Footer = () => {
             <h2 className="font-poppins mt-4 text-3xl font-bold uppercase leading-[1.02] tracking-[-0.03em] sm:text-5xl lg:text-[62px]">
               {t("footer.title")}
             </h2>
-            <a href="mailto:contacto@forgetech.dev" className="font-poppins mt-7 inline-block border-b-2 border-white/25 pb-1 text-xl font-medium text-ink-foreground transition-colors hover:border-white hover:text-white sm:text-2xl lg:text-[28px]">
-              contacto@forgetech.dev
+            <a href={`mailto:${CONTACT_EMAIL}`} onClick={trackContact} className="font-poppins mt-7 inline-block border-b-2 border-white/25 pb-1 text-xl font-medium text-ink-foreground transition-colors hover:border-white hover:text-white sm:text-2xl lg:text-[28px]">
+              {CONTACT_EMAIL}
             </a>
           </div>
 
@@ -38,8 +39,7 @@ export const Footer = () => {
               <p className="font-inter text-[11.5px] font-semibold uppercase tracking-[0.14em] text-white/45">
                 {t("footer.writeTitle")}
               </p>
-              <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" className="font-inter text-[15.5px] text-white/75 transition-colors hover:text-white">WhatsApp</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="font-inter text-[15.5px] text-white/75 transition-colors hover:text-white">LinkedIn</a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={trackContact} className="font-inter text-[15.5px] text-white/75 transition-colors hover:text-white">WhatsApp</a>
               <a href="#contact" className="font-inter text-[15.5px] text-white/75 transition-colors hover:text-white">{t("footer.demoLink")}</a>
             </div>
           </div>

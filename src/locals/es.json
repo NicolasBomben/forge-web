@@ -192,28 +192,13 @@
   "contact": {
     "eyebrow": "Contacto",
     "title": "Pedí la demo. Es una charla, no una venta.",
-    "stepInterest": "01 · Qué te interesa",
-    "stepName": "02 · Tu nombre",
-    "stepEmail": "03 · Tu correo",
-    "stepMessage": "04 · Contanos un poco",
-    "interests": [
-      "El asistente para mi negocio",
-      "El asistente para mi tienda online",
-      "Una web o landing page",
-      "Integraciones o desarrollo a medida"
-    ],
-    "namePlaceholder": "Nombre y apellido",
-    "emailPlaceholder": "vos@tunegocio.com",
-    "messagePlaceholder": "Tenemos una tienda de indumentaria y nos llegan muchas consultas por talles y envíos…",
-    "submitButton": "Pedir mi demo",
-    "whatsappLabel": "Prefiero escribir",
+    "whatsappLabel": "Por WhatsApp",
     "mailLabel": "Por mail",
     "perks": [
       "Demo armada con datos de tu negocio",
       "Te decimos si te conviene o no",
       "Respuesta en menos de 24 horas"
-    ],
-    "alertMessage": "¡Mensaje enviado! Te escribimos en menos de 24 horas."
+    ]
   },
   "footer": {
     "eyebrow": "¿Arrancamos?",
